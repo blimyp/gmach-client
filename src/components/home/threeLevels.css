@@ -1,0 +1,55 @@
+.loan-steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+    direction: rtl;
+    background-color: #f8fafd;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px;
+    position: relative;
+}
+
+.circle-icon {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    background-color: #f4e4c4;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.step-icon {
+    width: 100%;
+}
+
+.step-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.step-description {
+    font-size: 14px;
+    color: #57421d;
+    line-height: 1.6;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    font-size: 24px;
+    transform: translateY(-50%);
+    color: #57421d;
+}

@@ -1,0 +1,25 @@
+.our_story_container {
+    padding: 10vh 10vw;
+    background: linear-gradient(135deg, #f4e4c4, #fdfaf6);
+}
+
+.text,
+h2 {
+    color: rgb(82, 52, 13);
+}
+
+.icon_container {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+
+
+}
+
+.icon_image {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
