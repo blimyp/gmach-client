@@ -1,14 +1,16 @@
+import RotateImage from '../../common/rotateImage/rotateimage';
 import './ourStory.css'
 
 export default function OurStory() {
     return (
         <div className="our_story_container">
             <div className='icon_container'>
-                <img
+                <RotateImage src="/favicon.png" alt="תמונה שמסתובבת בגלילה" />
+                {/* <img
                     src="/favicon.png"
                     alt="icon"
                     className='icon_image'
-                />
+                /> */}
             </div>
             <h2>הגמ"ח לכלי בר מתוקים – הסיפור שלנו</h2>
             <p className="text">

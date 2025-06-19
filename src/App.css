@@ -1,23 +1,18 @@
-.scroll-div {
-  height: 100vh;
-  overflow-y: auto;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f0f0;       
+  background: #f0f0f0;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;        
+  background: #888;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;         
+  background: #555;
 }

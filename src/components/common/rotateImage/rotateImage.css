@@ -1,0 +1,4 @@
+.scroll-rotate-image {
+    transition: transform 0.1s linear;
+    width: 300px;
+}

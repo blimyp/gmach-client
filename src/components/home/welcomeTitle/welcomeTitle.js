@@ -1,5 +1,6 @@
 import React from 'react';
 import CustomButton from '../../common/button/button';
+import TextAnimation from '../../common/textAnimation/textAnimation';
 import './welcomeTitle.css';
 
 export default function WelcomeTitle({ bottomRef }) {
@@ -16,8 +17,10 @@ export default function WelcomeTitle({ bottomRef }) {
                 className="welcome-image"
             />
             <div className="welcome-text">
-                <h1>ברוכים הבאים לגמ"ח</h1>
-                <p>יחד נעזור להפוך כל אירוע למיוחד</p>
+                <TextAnimation>
+                    <h1>ברוכים הבאים לגמ"ח</h1>
+                    <p>יחד נעזור להפוך כל אירוע למיוחד</p>
+                </TextAnimation>
                 <CustomButton onClick={scrollToBottom} text={'מהרו לתפוס תאריך'} />
             </div>
         </div>

@@ -1,0 +1,14 @@
+.shrink-image {
+    transform: scale(1.2);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+  
+  .shrink-image.visible {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
