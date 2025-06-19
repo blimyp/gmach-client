@@ -1,0 +1,29 @@
+.dark-button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #685827;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.light-button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f4e4c4;
+    border: none;
+    font-size: 20px;
+    color: #a97400;
+    cursor: pointer;
+    position: relative;
+}
+
+.dark-button:hover {
+    background-color: #54461c;
+}
+
+.light-button:hover {
+    background-color: #e0cba3;
+}

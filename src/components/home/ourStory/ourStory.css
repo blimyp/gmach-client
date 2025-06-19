@@ -1,6 +1,7 @@
 .our_story_container {
     padding: 10vh 10vw;
     background: linear-gradient(135deg, #f4e4c4, #fdfaf6);
+    text-align: center;
 }
 
 .text,

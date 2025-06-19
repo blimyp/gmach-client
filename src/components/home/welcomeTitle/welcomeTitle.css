@@ -29,12 +29,3 @@
     color: #e9cb90;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
 }
-
-.scroll-button {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #f4e4c4;
-    border: none;
-    font-size: 20px;
-    color: #a97400;
-}

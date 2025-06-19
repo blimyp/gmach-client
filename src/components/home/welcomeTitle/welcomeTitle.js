@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomButton from '../../common/button/button';
 import './welcomeTitle.css';
 
 export default function WelcomeTitle({ bottomRef }) {
@@ -17,9 +18,7 @@ export default function WelcomeTitle({ bottomRef }) {
             <div className="welcome-text">
                 <h1>ברוכים הבאים לגמ"ח</h1>
                 <p>יחד נעזור להפוך כל אירוע למיוחד</p>
-                <button onClick={scrollToBottom} className={'scroll-button'}/* style={{ position: 'fixed', top: 20, right: 20, zIndex: 1000 }}*/>
-                    מהרו לתפוס תאריך
-                </button>
+                <CustomButton onClick={scrollToBottom} text={'מהרו לתפוס תאריך'} />
             </div>
         </div>
     );

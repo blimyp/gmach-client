@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
 import './orderForm.css';
-import { createOrder } from '../../services/orderService';
+import { createOrder } from '../../../services/orderService';
 import emailjs from "@emailjs/browser";
+import Spinner from '../../common/spinner/spinner';
 
 export default function OrderForm() {
     const form = useRef();
@@ -69,7 +70,7 @@ export default function OrderForm() {
 
             <button type="submit" disabled={isLoading}>
                 שליחה
-                {isLoading ? (<span className="spinner"></span>) : ('')}
+                {isLoading ? (<Spinner />) : ('')}
             </button>
         </form>
     );

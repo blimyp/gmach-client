@@ -7,3 +7,5 @@ export const createOrderRequest = (data) => axios.post(`${baseUrl}/orders/create
 export const getAllOrdersRequest = () => axios.get(`${baseUrl}/orders`);
 
 export const deleteOrderRequest = (id) => axios.delete(`${baseUrl}/${id}`);
+
+export const getOrderByIdRequest = (id) => axios.get(`${baseUrl}/orders/${id}`);
