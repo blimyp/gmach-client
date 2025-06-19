@@ -5,7 +5,7 @@ export default function OurStory() {
         <div className="our_story_container">
             <div className='icon_container'>
                 <img
-                    src="/images/icon_image.JPG"
+                    src="/favicon.png"
                     alt="icon"
                     className='icon_image'
                 />

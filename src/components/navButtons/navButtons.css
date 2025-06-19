@@ -1,9 +1,24 @@
 .navbar {
     position: fixed;
-    top: 10px;
-    width: 100%;
+    right: 0;
+    height: 100%;
+    padding: 0 10px;
     z-index: 3;
-    margin: auto;
-    direction: ltr;
-    text-align: center;
+    background-color: rgba(111, 82, 33, 0.614);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-div {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.icon-image {
+    width: 100%;
+    height: 100%;
 }
