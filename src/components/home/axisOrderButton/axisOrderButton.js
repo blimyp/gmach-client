@@ -8,13 +8,13 @@ export default function AxisOrderButton() {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(routes.axisOrder);
+        navigate(routes.article);
     };
 
     return (
         <div className="banner-bar">
             <div className="banner-content">
-                <h2 className="banner-title">למידע מלא על ההזמנה שלך</h2>
+                <h2 className="banner-title">רוצה בר מתוקים בלי כאב ראש? למדריך המלא שלב אחרי שלב </h2>
                 <CustomButton onClick={handleClick} text={'לחץ כאן'} darkButton={true} />
             </div>
         </div>

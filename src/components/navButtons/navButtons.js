@@ -1,24 +1,26 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import routes from '../../constants/routes';
-import { isLoggedIn, removeToken } from "../../services/tokenService";
+import { AuthContext } from "../../contexts/authContext";
+import { removeToken } from "../../services/tokenService";
 import CustomButton from "../common/button/button";
 import LinkButton from '../common/linkButton/linkButton';
 import './navButtons.css';
 
 const NavButtons = () => {
     const navigate = useNavigate();
+    const { token } = useContext(AuthContext);
 
     return (
         <nav className='navbar'>
-            {isLoggedIn() && <UserNameButton />}
+            {token && <UserNameButton />}
             <div className='icon-div'><img src="/favicon.png" alt="icon" className="icon-image" /></div>
             <LinkButton onClick={() => navigate(routes.home)} text={'דף בית'} />
             <LinkButton onClick={() => navigate(routes.gallery)} text={'גלריה'} />
             {/* <LinkButton onClick={() => navigate(routes.axisOrder)} text={'הזמנה קיימת'} /> */}
             <LinkButton onClick={() => navigate(routes.newOrder)} text={'הזמנה חדשה'} />
-            {isLoggedIn() && <LinkButton onClick={() => navigate(routes.orders)} text={'רשימת הזמנות'} />}
-            {!isLoggedIn() && <div className="login-button-div"><CustomButton text={'להתחברות'} onClick={() => navigate(routes.login)} /></div>}
+            {token && <LinkButton onClick={() => navigate(routes.orders)} text={'רשימת הזמנות'} />}
+            {!token && <div className="login-button-div"><CustomButton text={'להתחברות'} onClick={() => navigate(routes.login)} /></div>}
         </nav>
     );
 };
@@ -26,8 +28,8 @@ const NavButtons = () => {
 function UserNameButton() {
     const [open, setOpen] = useState(false);
     const popoverRef = useRef();
+    const { setToken } = useContext(AuthContext);
 
-    // סגירה כשעושים קליק מחוץ
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (popoverRef.current && !popoverRef.current.contains(e.target)) {
@@ -47,7 +49,6 @@ function UserNameButton() {
                     ref={popoverRef}
                     style={{
                         position: 'absolute',
-                        // top: '100%',
                         right: 0,
                         background: 'white',
                         border: '1px solid #ccc',
@@ -57,7 +58,7 @@ function UserNameButton() {
                         borderRadius: '8px',
                     }}
                 >
-                    <LinkButton onClick={removeToken} text={'התנתק'} color={'black'} />
+                    <LinkButton onClick={() => { removeToken(); setToken(null); }} text={'התנתק'} color={'black'} />
                 </div>
             )}
         </div>

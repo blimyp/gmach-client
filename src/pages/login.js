@@ -1,15 +1,20 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './login.css';
 import LinkButton from '../components/common/linkButton/linkButton';
 import { login, register } from '../services/userService';
+import { AuthContext } from '../contexts/authContext';
+import { useNavigate } from 'react-router-dom';
+import routes from '../constants/routes';
 
-function LoginForm() {
+function LoginForm({ routeToNavigate }) {
     const [isSignUp, setIsSignUp] = useState(false);
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const { setToken } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,12 +27,15 @@ function LoginForm() {
 
         try {
             if (isSignUp) {
-                await register({ name, phone, email, password });
+                const data = await register({ name, phone, email, password });
+                setToken(data.token);
                 console.log('נרשמת בהצלחה');
             } else {
-                await login({ email, password });
+                const data = await login({ email, password });
+                setToken(data.token);
                 console.log('התחברת בהצלחה');
             }
+            navigate(routeToNavigate != null ? routeToNavigate : routes.home);
         } catch (err) {
             setError('התרחשה שגיאה, בדוק את הפרטים ונסה שוב');
         }
