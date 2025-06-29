@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react';
-import './orderForm.css';
-import { createOrder } from '../../../services/orderService';
+import './newOrder.css';
+import { createOrder } from '../../services/orderService';
 import emailjs from "@emailjs/browser";
-import Spinner from '../../common/spinner/spinner';
+import Spinner from '../../components/common/spinner/spinner';
 
-export default function OrderForm() {
+export default function NewOrder() {
     const form = useRef();
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({

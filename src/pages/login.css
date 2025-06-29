@@ -1,0 +1,59 @@
+/* רקע לעמוד כולו */
+.login-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../../public/images/background.jpg');
+    /* הנתיב מה-public */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* טופס ההתחברות */
+.login-form {
+    background-color: rgba(255, 255, 255, 0.695);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.75rem 0;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.login-form button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.login-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.login-form p {
+    color: red;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.register-prompt {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}

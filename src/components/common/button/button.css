@@ -1,6 +1,6 @@
 .dark-button {
-    padding: 10px;
-    border-radius: 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
     background-color: #685827;
     border: none;
     font-size: 20px;
@@ -10,8 +10,8 @@
 }
 
 .light-button {
-    padding: 10px;
-    border-radius: 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
     background-color: #f4e4c4;
     border: none;
     font-size: 20px;

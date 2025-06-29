@@ -23,8 +23,6 @@ export default function RotateImage({ src, alt }) {
     useEffect(() => {
 
         const handleScroll = () => {
-            console.log('in view?', inView);
-
             if (!inView) return;
 
             const currentScrollY = window.scrollY;

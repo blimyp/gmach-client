@@ -19,8 +19,8 @@ const thanksTexts = [
 export default function ThankCard({ text, title }) {
     return (
         <div className="thank-cards-row">
-            {thanksTexts.map((thankData) => (
-                <div className="elegant-card">
+            {thanksTexts.map((thankData, index) => (
+                <div className="elegant-card" key={`thank card ${index}`}>
                     <h2 className="elegant-card-title">{thankData.name}</h2>
                     <pre className='thank_text'>{thankData.text}</pre>
                 </div>

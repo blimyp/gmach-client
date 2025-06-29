@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Spinner from '../spinner/spinner';
 import './button.css'
 
-export default function CustomButton({ onClick, text, darkButton = false }) {
+export default function CustomButton({ onClick, text, darkButton = false, type }) {
     const [isLoading, setIsLoading] = useState(false);
 
     const handleClick = async (e) => {
@@ -12,7 +12,7 @@ export default function CustomButton({ onClick, text, darkButton = false }) {
     };
 
     return (
-        <button onClick={handleClick} className={darkButton ? 'dark-button' : 'light-button'} >
+        <button onClick={handleClick} type={type} className={darkButton ? 'dark-button' : 'light-button'} >
             {text}
             {isLoading ? (<Spinner />) : ('')}
         </button>

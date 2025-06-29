@@ -5,6 +5,9 @@ import AxisOrder from './pages/axisOrder';
 import NavButtons from './components/navButtons/navButtons';
 import routes from './constants/routes';
 import Gallery from './pages/gallery';
+import LoginForm from './pages/login';
+import Orders from './pages/orders';
+import NewOrder from './pages/newOrder/newOrder';
 
 function App() {
   return (
@@ -15,7 +18,9 @@ function App() {
           <Route path={routes.home} element={<Home />} />
           <Route path={routes.axisOrder} element={<AxisOrder />} />
           <Route path={routes.gallery} element={<Gallery />} />
-          <Route path={routes.orders} element={<AxisOrder />} />
+          <Route path={routes.orders} element={<Orders />} />
+          <Route path={routes.login} element={<LoginForm />} />
+          <Route path={routes.newOrder} element={<NewOrder />} />
         </Routes>
       </div>
     </Router>
