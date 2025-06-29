@@ -25,7 +25,7 @@ function LoginForm() {
                 await register({ name, phone, email, password });
                 console.log('נרשמת בהצלחה');
             } else {
-                await login({email, password});
+                await login({ email, password });
                 console.log('התחברת בהצלחה');
             }
         } catch (err) {
@@ -34,48 +34,51 @@ function LoginForm() {
     };
 
     return (
-        <div className="login-form-container">
-            <form className="login-form" onSubmit={handleSubmit}>
-                {isSignUp && (
-                    <>
-                        <input
-                            type="text"
-                            placeholder="שם מלא"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                        <input
-                            type="tel"
-                            placeholder="טלפון"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                        />
-                    </>
-                )}
-                <input
-                    type="email"
-                    placeholder="אימייל"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="סיסמה"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <button type={"submit"} >{isSignUp ? 'הרשמה' : 'התחברות'}</button>
-                {error && <p className="error-message">{error}</p>}
-                <div className="register-prompt">
-                    <span>{isSignUp ? 'כבר רשום?' : 'לא רשום עדיין?'}</span>
-                    <LinkButton
-                        onClick={() => setIsSignUp(!isSignUp)}
-                        text={isSignUp ? 'להתחברות' : 'להרשמה'}
-                        color={'black'}
-                        fontSize={'0.8rem'}
+        <div className="login-form-wrapper">
+            <img src="/images/background.jpg" alt="background" className="background-image" />
+            <div className="login-form-container">
+                <form className="login-form" onSubmit={handleSubmit}>
+                    {isSignUp && (
+                        <>
+                            <input
+                                type="text"
+                                placeholder="שם מלא"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                            <input
+                                type="tel"
+                                placeholder="טלפון"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                            />
+                        </>
+                    )}
+                    <input
+                        type="email"
+                        placeholder="אימייל"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
-                </div>
-            </form>
+                    <input
+                        type="password"
+                        placeholder="סיסמה"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <button type={"submit"} >{isSignUp ? 'הרשמה' : 'התחברות'}</button>
+                    {error && <p className="error-message">{error}</p>}
+                    <div className="register-prompt">
+                        <span>{isSignUp ? 'כבר רשום?' : 'לא רשום עדיין?'}</span>
+                        <LinkButton
+                            onClick={() => setIsSignUp(!isSignUp)}
+                            text={isSignUp ? 'להתחברות' : 'להרשמה'}
+                            color={'black'}
+                            fontSize={'0.8rem'}
+                        />
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }

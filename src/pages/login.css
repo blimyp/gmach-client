@@ -1,14 +1,27 @@
-/* רקע לעמוד כולו */
+.login-form-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
 .login-form-container {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: url('../../public/images/background.jpg');
-    /* הנתיב מה-public */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 100%;
 }
 
 /* טופס ההתחברות */
