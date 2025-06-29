@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './gallery.css';
 
 const images = [
+    '/images/image1.png',
+    '/images/image2.png',
+    '/images/image4.png',
+    '/images/background.jpg',
     '/images/gallery1.jpg',
     '/images/gallery2.jpg',
     '/images/gallery3.jpg',
@@ -9,10 +13,6 @@ const images = [
     '/images/gallery5.jpg',
     '/images/gallery6.jpg',
     '/images/gallery7.jpg',
-    '/images/image1.png',
-    '/images/image2.png',
-    '/images/image4.png',
-    '/images/background.jpg',
 ];
 
 export default function Gallery() {

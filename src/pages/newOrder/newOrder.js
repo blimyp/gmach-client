@@ -8,9 +8,6 @@ export default function NewOrder() {
     const form = useRef();
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
-        customerName: '',
-        customerPhone: '',
-        customerMail: '',
         orderDate: '',
         orderDescription: '',
     });
@@ -38,40 +35,28 @@ export default function NewOrder() {
     };
 
     return (
-        <form ref={form} className="order-form" onSubmit={handleSubmit}>
-            <h2>טופס השלמת הזמנה</h2>
+        <div className="order-page">
+            <img src="/images/background.jpg" alt="background" className="background-img" />
+            <form ref={form} className="order-form" onSubmit={handleSubmit}>
+                <h2>טופס השלמת הזמנה</h2>
+                <label>
+                    תאריך הזמנה:
+                    <input type="date" name="orderDate" value={formData.orderDate} onChange={handleChange} required />
+                </label>
 
-            <label>
-                שם לקוח:
-                <input type="text" name="customerName" value={formData.customerName} onChange={handleChange} required />
-            </label>
+                <label>
+                    תאור פריטים:
+                    <input type="description" name="orderDescription" value={formData.orderDescription} onChange={handleChange} required />
+                </label>
 
-            <label>
-                טלפון לקוח:
-                <input type="tel" name="customerPhone" value={formData.customerPhone} onChange={handleChange} required />
-            </label>
+                <input type="hidden" name="orderId" />
 
-            <label>
-                מייל:
-                <input type="mail" name="customerMail" value={formData.customerMail} onChange={handleChange} required />
-            </label>
-
-            <label>
-                תאריך הזמנה:
-                <input type="date" name="orderDate" value={formData.orderDate} onChange={handleChange} required />
-            </label>
-
-            <label>
-                תאור פריטים:
-                <input type="description" name="orderDescription" value={formData.orderDescription} onChange={handleChange} required />
-            </label>
-
-            <input type="hidden" name="orderId" />
-
-            <button type="submit" disabled={isLoading}>
-                שליחה
-                {isLoading ? (<Spinner />) : ('')}
-            </button>
-        </form>
+                <button type="submit" disabled={isLoading}>
+                    שליחה
+                    {isLoading ? (<Spinner />) : ('')}
+                </button>
+            </form>
+        </div>
     );
+
 }
