@@ -1,10 +1,8 @@
 import { getUserByIdRequest, loginRequest, registerRequest } from '../api';
-import { saveToken } from './tokenService';
 
 export const register = async ({ email, password, phone, name }) => {
     try {
         const response = await registerRequest(email, password, phone, name);
-        localStorage.setItem('token', response.data.token);
         return response.data;
     } catch (err) {
         console.error('שגיאה בהרשמה', err);
@@ -15,7 +13,6 @@ export const register = async ({ email, password, phone, name }) => {
 export const login = async ({ email, password }) => {
     try {
         const response = await loginRequest(email, password);
-        saveToken(response.data.token);
         return response.data;
     } catch (err) {
         console.error('שגיאה בכניסת משתמש', err);

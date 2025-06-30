@@ -2,7 +2,6 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import routes from '../../constants/routes';
 import { AuthContext } from "../../contexts/authContext";
-import { removeToken } from "../../services/tokenService";
 import CustomButton from "../common/button/button";
 import LinkButton from '../common/linkButton/linkButton';
 import './navButtons.css';
@@ -28,7 +27,9 @@ const NavButtons = () => {
 function UserNameButton() {
     const [open, setOpen] = useState(false);
     const popoverRef = useRef();
-    const { setToken } = useContext(AuthContext);
+    const { logoutContext, user } = useContext(AuthContext);
+    const { name } = user;
+
 
     useEffect(() => {
         const handleClickOutside = (e) => {
@@ -42,7 +43,7 @@ function UserNameButton() {
 
     return (
         <div style={{ position: 'relative', display: 'inline-block' }}>
-            <LinkButton onClick={() => setOpen(!open)} text={'userName'} />
+            <LinkButton onClick={() => setOpen(!open)} text={name} />
 
             {open && (
                 <div
@@ -50,6 +51,7 @@ function UserNameButton() {
                     style={{
                         position: 'absolute',
                         right: 0,
+                        margin: 'auto',
                         background: 'white',
                         border: '1px solid #ccc',
                         padding: '10px',
@@ -58,7 +60,7 @@ function UserNameButton() {
                         borderRadius: '8px',
                     }}
                 >
-                    <LinkButton onClick={() => { removeToken(); setToken(null); }} text={'התנתק'} color={'black'} />
+                    <LinkButton onClick={() => logoutContext()} text={'התנתק'} color={'black'} />
                 </div>
             )}
         </div>

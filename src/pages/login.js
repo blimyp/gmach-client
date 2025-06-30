@@ -13,7 +13,7 @@ function LoginForm({ routeToNavigate }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const { setToken } = useContext(AuthContext);
+    const { loginContext } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -27,12 +27,12 @@ function LoginForm({ routeToNavigate }) {
 
         try {
             if (isSignUp) {
-                const data = await register({ name, phone, email, password });
-                setToken(data.token);
+                const { token, user } = await register({ name, phone, email, password });
+                loginContext(user, token);
                 console.log('נרשמת בהצלחה');
             } else {
-                const data = await login({ email, password });
-                setToken(data.token);
+                const { token, user } = await login({ email, password });
+                loginContext(user, token);
                 console.log('התחברת בהצלחה');
             }
             navigate(routeToNavigate != null ? routeToNavigate : routes.home);
