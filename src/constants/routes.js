@@ -1,7 +1,6 @@
 const routes = {
     home: '/',
     orders: '/orders',
-    axisOrder: '/axisOrder',
     article: '/article',
     gallery: '/gallery',
     login: '/login',

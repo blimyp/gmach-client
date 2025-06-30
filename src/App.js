@@ -16,7 +16,6 @@ function App() {
         <NavButtons />
         <Routes>
           <Route path={routes.home} element={<Home />} />
-          {/* <Route path={routes.axisOrder} element={<AxisOrder />} /> */}
           <Route path={routes.article} element={<Article />} />
           <Route path={routes.gallery} element={<Gallery />} />
           <Route path={routes.orders} element={<Orders />} />

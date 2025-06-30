@@ -1,4 +1,4 @@
-import { createOrderRequest, getOrderByIdRequest } from '../api';
+import { createOrderRequest, getAllOrdersRequest } from '../api';
 
 export const createOrder = async ({ orderData }) => {
     try {
@@ -10,19 +10,13 @@ export const createOrder = async ({ orderData }) => {
     }
 };
 
-export const getOrderById = async ({ orderId }) => {
+export const getOrders = async () => {
     try {
-        const response = await getOrderByIdRequest(orderId);
+        const response = await getAllOrdersRequest();
         return response.data;
     } catch (err) {
-        if (err.response.status === 404) {
-            alert('לא נמצאה הזמנה עם מספר זה\nבדוק שוב את מספר ההזמנה שקיבלת.')
-        } else {
-            console.error('שגיאה בקבלת הזמנה:', err);
-            const errorToThrow = err ?? { message: 'שגיאה כללית ביצירת הזמנה' };
-            throw errorToThrow;
-        }
-
+        console.error('שגיאה בקבלת הזמנות:', err);
+        alert(err);
     }
 };
 

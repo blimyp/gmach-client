@@ -9,9 +9,6 @@ export const getAllOrdersRequest = () =>
 export const deleteOrderRequest = (id) =>
     axiosInstance.delete(`/orders/${id}`);
 
-export const getOrderByIdRequest = (id) =>
-    axiosInstance.get(`/orders/${id}`);
-
 export const loginRequest = async (email, password) => {
     const response = await axiosInstance.post('/users/login', { email, password });
     return response;
