@@ -17,6 +17,7 @@ function LoginForm({ routeToNavigate }) {
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
+        console.log('start login');
         e.preventDefault();
         setError('');
 

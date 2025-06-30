@@ -1,8 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import './newOrder.css';
 import { createOrder } from '../../services/orderService';
 import emailjs from "@emailjs/browser";
 import Spinner from '../../components/common/spinner/spinner';
+import { AuthContext } from '../../contexts/authContext';
 
 export default function NewOrder() {
     const form = useRef();
@@ -11,6 +12,7 @@ export default function NewOrder() {
         orderDate: '',
         orderDescription: '',
     });
+    const { user } = useContext(AuthContext);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -22,16 +24,26 @@ export default function NewOrder() {
         setIsLoading(true);
         try {
             const newOrder = await createOrder({ orderData: formData });
-            setIsLoading(false);
-            alert('ההזמנה נשלחה בהצלחה!');
-            form.current.orderId.value = newOrder.orderId;
-            emailjs.sendForm("service_knbxmbg", "template_b4ii71d", form.current, "a9upb4z0sKTekMhII");
-            form.current.reset();
+            if (newOrder) {
+                setIsLoading(false);
+                alert('ההזמנה נשלחה בהצלחה!');
+                sendEmail(newOrder.orderId);
+            }
         } catch (err) {
             console.log(err);
             setIsLoading(false);
             alert('אירעה שגיאה בשליחת ההזמנה');
         }
+    };
+
+    const sendEmail = (orderId) => {
+        const templateParams = {
+            orderId: orderId,
+            customerMail: user.email,
+            customerName: user.name,
+        };
+        emailjs.send("service_knbxmbg", "template_b4ii71d", templateParams, "a9upb4z0sKTekMhII")
+
     };
 
     return (
@@ -48,9 +60,6 @@ export default function NewOrder() {
                     תאור פריטים:
                     <input type="description" name="orderDescription" value={formData.orderDescription} onChange={handleChange} required />
                 </label>
-
-                <input type="hidden" name="orderId" />
-
                 <button type="submit" disabled={isLoading}>
                     שליחה
                     {isLoading ? (<Spinner />) : ('')}
