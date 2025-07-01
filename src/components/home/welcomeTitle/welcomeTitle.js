@@ -1,5 +1,5 @@
 import React from 'react';
-import TextAnimation from '../../common/textAnimation/textAnimation';
+import SlideInFromRight from '../../common/animationFromRight/animationFromRight';
 import './welcomeTitle.css';
 
 export default function WelcomeTitle() {
@@ -11,10 +11,15 @@ export default function WelcomeTitle() {
                 className="welcome-image"
             />
             <div className="welcome-text">
-                <TextAnimation>
-                    <h1>ברוכים הבאים לגמ"ח</h1>
+                <SlideInFromRight>
+                    <h1>גמ"ח כלים לבר</h1>
+                </SlideInFromRight>
+                <SlideInFromRight fromRight={false} delay={1000}>
                     <p>יחד נעזור להפוך כל אירוע למיוחד</p>
-                </TextAnimation>
+                </SlideInFromRight>
+                <SlideInFromRight delay={1500}>
+                    <p>עם מגוון עשיר של ציוד – כדי שלא תצטרכו להתפשר על כלום</p>
+                </SlideInFromRight>
                 {/* <CustomButton onClick={scrollToBottom} text={'מהרו לתפוס תאריך'} /> */}
             </div>
         </div>

@@ -3,7 +3,7 @@
     background-color: #ffffff00;
     border: none;
     font-size: 17px;
-    color: #f4e4c4;
+    color: var(--beige);
     cursor: pointer;
 }
 

@@ -1,0 +1,17 @@
+.slide-in-container {
+    opacity: 0;
+    transition: transform ease-out, opacity ease-out;
+}
+
+.slide-in-container.from-right {
+    transform: translateX(100%);
+}
+
+.slide-in-container.from-left {
+    transform: translateX(-100%);
+}
+
+.slide-in-container.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+}

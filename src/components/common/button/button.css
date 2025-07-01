@@ -1,29 +1,33 @@
 .dark-button {
     padding: 5px 10px;
     border-radius: 50px;
-    background-color: #685827;
-    border: none;
+    background-color: var(--dark-red);
+    border: 2px white solid;
     font-size: 20px;
     color: white;
     cursor: pointer;
     position: relative;
+    transition: background-color 0.2s ease, color 0.2s ease; 
 }
 
 .light-button {
     padding: 5px 10px;
     border-radius: 50px;
-    background-color: #f4e4c4;
-    border: none;
+    background-color: white;
+    border: 2px var(--dark-red) solid;
     font-size: 20px;
-    color: #a97400;
+    color: var(--dark-red);
     cursor: pointer;
     position: relative;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .dark-button:hover {
-    background-color: #54461c;
+    background-color: white;
+    color: var(--dark-red);
 }
 
 .light-button:hover {
-    background-color: #e0cba3;
+    background-color: var(--dark-red);
+    color: white;
 }

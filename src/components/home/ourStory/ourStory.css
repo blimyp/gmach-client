@@ -1,12 +1,11 @@
 .our_story_container {
     padding: 10vh 10vw;
-    background: linear-gradient(135deg, #f4e4c4, #fdfaf6);
+    background-color: var(--dark-red);
     text-align: center;
 }
 
-.text,
-h2 {
-    color: rgb(82, 52, 13);
+.text {
+    color: var(--beige);
 }
 
 .icon_container {

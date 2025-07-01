@@ -1,20 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './threeLevels.css';
+import { FaPhone, FaCar } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
+
+
 
 export default function LoanSteps() {
     const steps = [
         {
-            icon: '/images/mail.png',
+            icon: <IoMail size={30} color={'var(--dark-red)'} />,
             title: 'מזמינים באתר',
             description: 'ממלאים את טופס ההשלמה כאן באתר עם כל הפרטים הרלוונטיים',
         },
         {
-            icon: '/images/phone.png',
+            icon: <FaPhone size={30} color={'var(--dark-red)'} />,
             title: 'ממתינים לטלפון',
             description: 'יש לחכות לטלפון שהכלים נשמרו לכם לתאריך שבחרתם (זה יכול לקחת כמה ימים)',
         },
         {
-            icon: '/images/car.png',
+            icon: <FaCar size={30} color={'var(--dark-red)'} />,
             title: 'באים לקחת',
             description: 'מגיעים ביום של האירוע בשעות בוקר - צהריים לקחת את הכלים עם רכב או עם עגלה גדולה',
         },
@@ -47,7 +51,7 @@ export default function LoanSteps() {
                     key={index}
                 >
                     <div className='circle-icon'>
-                        <img src={step.icon} alt={step.title} className="step-icon" />
+                        {step.icon}
                     </div>
                     <h4 className="step-title">{step.title}</h4>
                     <p className="step-description">{step.description}</p>

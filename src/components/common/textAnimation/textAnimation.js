@@ -9,11 +9,12 @@ export default function TextAnimation({ children }) {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
+                    console.log('set');
                     setIsVisible(true);
                     observer.disconnect();
                 }
             },
-            { threshold: 0.1 }
+            { threshold: 0.3 }
         );
 
         if (ref.current) observer.observe(ref.current);
