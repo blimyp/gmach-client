@@ -1,10 +1,20 @@
+.thank-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    width: 100%;
+    direction: rtl;
+    box-sizing: border-box;
+    padding: 10vh 10vw;
+}
+
 .elegant-card {
-    flex: 1 1 0;
-    min-width: 300;
+    flex: 1;
+    width: 200;
     padding: 2rem;
-    background: #fdfaf6;
-    border: 1px solid #d4af37;
-    border-radius: 30px 30px 30px 0px;
+    background: linear-gradient(to bottom, var(--beige), white);
+    border: 1px solid transparent;
+    border-radius: 30px 5px 30px 5px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: #000;
@@ -12,30 +22,18 @@
 }
 
 .elegant-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #f4e4c4, #fdfaf6);
+    border: 1px solid var(--dark-red);
+    transform: scale(1.05);
 }
 
 .elegant-card-title {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 1px solid var(--dark-red);
     padding-bottom: 0.5rem;
-    color: #d4af37;
     font-weight: bold;
 }
 
 .thank_text {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.thank-cards-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5vw;
-    width: 100%;
-    direction: rtl;
-    box-sizing: border-box;
-    padding: 10vh 10vw;
 }

@@ -1,10 +1,23 @@
-.our_story_container {
-    padding: 10vh 10vw;
-    background-color: var(--dark-red);
+.our-story-body {
+    border: 1px solid var(--yellow);
+    margin: auto;
+    width: 80vw;
     text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+.our_story_container {
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--dark-red);
 }
 
 .text {
+    margin: 20px 100px;
     color: var(--beige);
 }
 

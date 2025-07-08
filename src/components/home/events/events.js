@@ -15,13 +15,17 @@ export default function ImageTextSplit({ text, title, image, reverse }) {
                 </TextAnimation>
             </div>
             <div className="split-image">
-                <img src='/images/image1.png' alt="icon" className="image" />
+                <div className='image-div'>
+                    <img src='/images/image1.png' alt="icon" className="image" />
+                </div>
             </div>
         </div>
 
         <div className="image-text-split">
             <div className="split-image">
-                <img src='/images/image2.png' alt="icon" className="image" />
+                <div className='image-div'>
+                    <img src='/images/image2.png' alt="icon" className="image" />
+                </div>
             </div>
             <div className="split-content">
                 <TextAnimation>

@@ -5,6 +5,8 @@ import LoanSteps from '../components/home/threeLevels/threeLevels';
 import WelcomeTitle from '../components/home/welcomeTitle/welcomeTitle';
 import './home.css'
 import AxisOrderButton from '../components/home/axisOrderButton/axisOrderButton';
+import Quastions from '../components/home/quastions/quastions';
+import Details from '../components/home/details/details';
 
 
 
@@ -18,6 +20,8 @@ export default function Home() {
             <ImageTextSplit />
             <OurStory />
             <ThankCard />
+            <Details />
+            <Quastions />
             <LoanSteps />
         </div>
     );

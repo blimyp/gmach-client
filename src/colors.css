@@ -1,6 +1,7 @@
 :root {
     --beige: #e9cb90;
-    --light-beige: #fff8e0;
-    --dark-red: #5f2616;
-    --yellow: #FFC107;
+    --light-beige: rgb(251, 245, 234);
+    --dark-red: #65190f;
+    --text-grey: #444;
+    --yellow: rgb(237, 183, 34);
 }

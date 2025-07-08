@@ -9,9 +9,9 @@ export default function TextAnimation({ children }) {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    console.log('set');
                     setIsVisible(true);
-                    observer.disconnect();
+                } else {
+                    setIsVisible(false); // מחוץ לפריים? החזר את האנימציה למצב התחלתי
                 }
             },
             { threshold: 0.3 }
@@ -30,3 +30,4 @@ export default function TextAnimation({ children }) {
         </div>
     );
 }
+
