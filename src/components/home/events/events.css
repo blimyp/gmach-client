@@ -1,7 +1,7 @@
+
 .image-text-split {
     display: flex;
     flex-direction: row;
-    /* border-radius: 24px; */
     overflow: hidden;
     margin: 40px auto;
     max-width: 80vw;
@@ -16,7 +16,7 @@
     position: relative;
 }
 
-.image-div {
+.enents-image-div {
     padding: 10px;
     border: 1px var(--yellow) solid;
 }

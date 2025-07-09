@@ -1,0 +1,21 @@
+.hole-body {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.hole-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70vh;
+    height: 70vh;
+    transform: translate(-50%, -50%);
+    border: 5px solid var(--dark-red);
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 0 0 0 9999px white;
+    pointer-events: none;
+    z-index: 3;
+}

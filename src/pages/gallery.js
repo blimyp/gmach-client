@@ -24,13 +24,15 @@ export default function Gallery() {
 
             <div className="gallery-grid">
                 {images.map((img, index) => (
-                    <img
-                        key={index}
-                        src={img}
-                        alt={`gallery ${index}`}
-                        className="gallery-image"
-                        onClick={() => setSelectedImage(img)}
-                    />
+                    <div className='image-div'>
+                        <img
+                            key={index}
+                            src={img}
+                            alt={`gallery ${index}`}
+                            className="gallery-image"
+                            onClick={() => setSelectedImage(img)}
+                        />
+                    </div>
                 ))}
             </div>
 

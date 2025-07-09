@@ -7,6 +7,7 @@ import './home.css'
 import AxisOrderButton from '../components/home/axisOrderButton/axisOrderButton';
 import Quastions from '../components/home/quastions/quastions';
 import Details from '../components/home/details/details';
+import HoleOverlay from '../components/home/circleHole/circleHole';
 
 
 
@@ -14,15 +15,29 @@ import Details from '../components/home/details/details';
 
 export default function Home() {
     return (
-        <div>
-            <WelcomeTitle />
-            <AxisOrderButton />
-            <ImageTextSplit />
-            <OurStory />
-            <ThankCard />
-            <Details />
-            <Quastions />
-            <LoanSteps />
+        <div className="homepage-container">
+            <img
+                src="/images/background.jpg"
+                alt="Background"
+                className="hole-background-img"
+            />
+
+            <div className="content-overlay">
+                <div className='white-bg-container'>
+                    <WelcomeTitle />
+                    <AxisOrderButton />
+                    <ImageTextSplit />
+                    <OurStory />
+                    <Quastions />
+                    <ThankCard />
+                </div>
+                <HoleOverlay />
+                <div className='white-bg-container'>
+                    <Details />
+                    <LoanSteps />
+                </div>
+            </div>
         </div>
+
     );
 }

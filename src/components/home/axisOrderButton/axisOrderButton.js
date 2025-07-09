@@ -42,7 +42,7 @@ export default function AxisOrderButton() {
                     ref={buttonRef}
                     className={animate ? "bounce-animation" : ""}
                 >
-                    <CustomButton onClick={handleClick} text={"לחץ כאן"} darkButton={true} />
+                    <CustomButton onClick={handleClick} text={"לחץ כאן"}/>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import CustomButton from "../../common/button/button";
 import "./quastions.css";
 import { useNavigate } from 'react-router-dom';
 import routes from "../../../constants/routes";
+import PulseBox from "../../common/pulseBox";
 
 
 const faq = [
@@ -38,7 +39,7 @@ export default function Quastions() {
 
     return (
         <div className="quastions-body">
-            <p>כאן תמצאי את כל התשובות!</p>
+            <PulseBox><p>כאן תמצאי את כל התשובות!</p></PulseBox>
             <div className="faq-list">
                 {faq.map((item, index) => (
                     <div className="faq-item" key={index}>
@@ -51,7 +52,7 @@ export default function Quastions() {
                     </div>
                 ))}
             </div>
-            <p>לצפייה באירועים קודמים</p>
+            <PulseBox><p>לצפייה באירועים קודמים</p></PulseBox>
             <div className="button-div">
                 <CustomButton text={'לחץ כאן'} onClick={() => { navigate(routes.gallery) }} />
             </div>

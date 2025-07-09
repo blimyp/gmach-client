@@ -1,4 +1,4 @@
-.thank-cards-row {
+/* .thank-cards-row {
     display: flex;
     flex-wrap: wrap;
     gap: 3vw;
@@ -36,4 +36,31 @@
 
 .thank_text {
     font-family: Arial, Helvetica, sans-serif;
+} */
+
+.info-section {
+    width: 80vw;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 50px;
+    border: 2px solid var(--dark-red);
+    border-radius: 5px;
+}
+
+.info-image {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.info-text {
+    flex: 1;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
 }
