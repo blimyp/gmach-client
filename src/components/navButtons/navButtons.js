@@ -10,26 +10,71 @@ const NavButtons = () => {
     const navigate = useNavigate();
     const { token } = useContext(AuthContext);
 
+    const [isOpen, setIsOpen] = useState(false);
+    const dialogRef = useRef();
+
+    const handleNavigate = (route) => {
+        navigate(route);
+        setIsOpen(false);
+    };
+
+    // סגירה בלחיצה מחוץ ל-dialog
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (dialogRef.current && !dialogRef.current.contains(e.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isOpen]);
+
     return (
-        <nav className='navbar'>
-            {token && <UserNameButton />}
-            <div className='icon-div'><img src="/favicon.png" alt="icon" className="icon-image" /></div>
-            <LinkButton onClick={() => navigate(routes.home)} text={'דף בית'} />
-            <LinkButton onClick={() => navigate(routes.gallery)} text={'גלריה'} />
-            {/* <LinkButton onClick={() => navigate(routes.axisOrder)} text={'הזמנה קיימת'} /> */}
-            <LinkButton onClick={() => navigate(token ? routes.newOrder : routes.login)} text={'הזמנה חדשה'} />
-            {token && <LinkButton onClick={() => navigate(routes.orders)} text={'רשימת הזמנות'} />}
-            {!token && <div className="login-button-div"><CustomButton text={'התחברות'} onClick={() => navigate(routes.login)} /></div>}
-        </nav>
+        <>
+            <button className="hamburger" onClick={() => setIsOpen(true)}>
+                ☰
+            </button>
+
+            <nav className='navbar'>
+                {token && <UserNameButton />}
+                <div className='icon-div'><img src="/favicon.png" alt="icon" className="icon-image" /></div>
+                <LinkButton onClick={() => navigate(routes.home)} text={'דף בית'} />
+                <LinkButton onClick={() => navigate(routes.gallery)} text={'גלריה'} />
+                <LinkButton onClick={() => navigate(token ? routes.newOrder : routes.login)} text={'הזמנה חדשה'} />
+                {token && <LinkButton onClick={() => navigate(routes.orders)} text={'רשימת הזמנות'} />}
+                {!token && <div className="login-button-div"><CustomButton text={'התחברות'} onClick={() => navigate(routes.login)} /></div>}
+            </nav>
+
+            {isOpen && (
+                <div className="mobile-dialog-overlay">
+                    <div className="mobile-dialog" ref={dialogRef}>
+                        <button className="close-btn" onClick={() => setIsOpen(false)}>X</button>
+                        <div className="mobile-menu-content">
+                            {token && <UserNameButton isMobile={true} />}
+                            <LinkButton onClick={() => handleNavigate(routes.home)} text={'דף בית'} />
+                            <LinkButton onClick={() => handleNavigate(routes.gallery)} text={'גלריה'} />
+                            <LinkButton onClick={() => handleNavigate(token ? routes.newOrder : routes.login)} text={'הזמנה חדשה'} />
+                            {token && <LinkButton onClick={() => handleNavigate(routes.orders)} text={'רשימת הזמנות'} />}
+                            {!token && <CustomButton text={'התחברות'} onClick={() => handleNavigate(routes.login)} />}
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
     );
 };
 
-function UserNameButton() {
+function UserNameButton({ isMobile = false }) {
     const [open, setOpen] = useState(false);
     const popoverRef = useRef();
     const { logoutContext, user } = useContext(AuthContext);
     const { name } = user;
-
 
     useEffect(() => {
         const handleClickOutside = (e) => {
@@ -41,17 +86,21 @@ function UserNameButton() {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+    if (isMobile) {
+        return (
+            <LinkButton onClick={() => logoutContext()} text={`התנתק (${name})`} />
+        );
+    }
+
     return (
         <div style={{ position: 'relative', display: 'inline-block' }}>
             <LinkButton onClick={() => setOpen(!open)} text={name} />
-
             {open && (
                 <div
                     ref={popoverRef}
                     style={{
                         position: 'absolute',
                         right: 0,
-                        margin: 'auto',
                         background: 'white',
                         border: '1px solid #ccc',
                         padding: '10px',

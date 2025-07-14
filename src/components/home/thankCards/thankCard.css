@@ -38,9 +38,12 @@
     font-family: Arial, Helvetica, sans-serif;
 } */
 
+.info-body {
+    padding-bottom: 50px;
+}
+
 .info-section {
     width: 80vw;
-    height: 90vh;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -58,9 +61,13 @@
     border-radius: 10px;
 }
 
+.info-bar-image {
+    width: 100%;
+}
+
 .info-text {
     flex: 1;
     font-size: 18px;
-    color: #333;
+    color: var(--text-grey);
     line-height: 1.8;
 }
