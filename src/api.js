@@ -14,7 +14,7 @@ export const loginRequest = async (email, password) => {
     return response;
 };
 
-export const registerRequest = async ({ name, email, password, phone }) => {
+export const registerRequest = async (email, password, phone, name) => {
     const response = await axiosInstance.post('/users/createUser', { name, email, password, phone });
     return response;
 };

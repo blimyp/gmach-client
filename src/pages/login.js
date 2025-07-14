@@ -5,6 +5,7 @@ import { login, register } from '../services/userService';
 import { AuthContext } from '../contexts/authContext';
 import { useNavigate } from 'react-router-dom';
 import routes from '../constants/routes';
+import Spinner from '../components/common/spinner/spinner';
 
 function LoginForm({ routeToNavigate }) {
     const [isSignUp, setIsSignUp] = useState(false);
@@ -13,6 +14,7 @@ function LoginForm({ routeToNavigate }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState('');
     const { loginContext } = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -27,6 +29,7 @@ function LoginForm({ routeToNavigate }) {
         }
 
         try {
+            setIsLoading(true);
             if (isSignUp) {
                 const { token, user } = await register({ name, phone, email, password });
                 loginContext(user, token);
@@ -36,10 +39,12 @@ function LoginForm({ routeToNavigate }) {
                 loginContext(user, token);
                 console.log('התחברת בהצלחה');
             }
+
             navigate(routeToNavigate != null ? routeToNavigate : routes.home);
         } catch (err) {
             setError('התרחשה שגיאה, בדוק את הפרטים ונסה שוב');
         }
+        setIsLoading(false);
     };
 
     return (
@@ -75,7 +80,7 @@ function LoginForm({ routeToNavigate }) {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button type={"submit"} >{isSignUp ? 'הרשמה' : 'התחברות'}</button>
+                    <button type={"submit"} >{isSignUp ? 'הרשמה' : 'התחברות'} {isLoading ? (<Spinner />) : ('')} </button>
                     {error && <p className="error-message">{error}</p>}
                     <div className="register-prompt">
                         <span>{isSignUp ? 'כבר רשום?' : 'לא רשום עדיין?'}</span>

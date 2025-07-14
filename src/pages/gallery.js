@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './gallery.css';
 
 const images = [
@@ -13,10 +13,29 @@ const images = [
     '/images/gallery5.jpg',
     '/images/gallery6.jpg',
     '/images/gallery7.jpg',
+    '/images/gallery8.jpg',
 ];
 
 export default function Gallery() {
     const [selectedImage, setSelectedImage] = useState(null);
+    const imageRefs = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // כדי שזה יקרה רק פעם אחת
+                }
+            });
+        }, { threshold: 0.1 });
+
+        imageRefs.current.forEach(img => {
+            if (img) observer.observe(img);
+        });
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div className="gallery-page">
@@ -24,9 +43,9 @@ export default function Gallery() {
 
             <div className="gallery-grid">
                 {images.map((img, index) => (
-                    <div className='image-div'>
+                    <div className='image-div' key={index}>
                         <img
-                            key={index}
+                            ref={el => imageRefs.current[index] = el}
                             src={img}
                             alt={`gallery ${index}`}
                             className="gallery-image"

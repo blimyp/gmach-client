@@ -54,7 +54,7 @@
     overflow: hidden;
     width: 100%;
     padding: 12px 0;
-    background-color: #f4e4c4;
+    background-color: var(--button-beige);
     color: black;
     border: none;
     border-radius: 8px;
@@ -65,5 +65,5 @@
 }
 
 .order-form button:hover {
-    background-color: #f6d99e;
+    background-color: var(--beige);
 }

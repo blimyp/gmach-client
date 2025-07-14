@@ -46,17 +46,17 @@
 .login-form button[type="submit"] {
     width: 100%;
     padding: 0.75rem;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--button-beige);
     border: none;
     border-radius: 8px;
     font-size: 1rem;
+    position: relative;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 }
 
 .login-form button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: var(--beige);
 }
 
 .login-form p {

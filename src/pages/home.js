@@ -4,10 +4,10 @@ import ThankCard from '../components/home/thankCards/thankCard';
 import LoanSteps from '../components/home/threeLevels/threeLevels';
 import WelcomeTitle from '../components/home/welcomeTitle/welcomeTitle';
 import './home.css'
-import AxisOrderButton from '../components/home/axisOrderButton/axisOrderButton';
 import Quastions from '../components/home/quastions/quastions';
 import Details from '../components/home/details/details';
 import HoleOverlay from '../components/home/circleHole/circleHole';
+import ArticleButton from '../components/home/articleButton/articleButton';
 
 
 
@@ -25,7 +25,7 @@ export default function Home() {
             <div className="content-overlay">
                 <div className='white-bg-container'>
                     <WelcomeTitle />
-                    <AxisOrderButton />
+                    <ArticleButton />
                     <ImageTextSplit />
                     <OurStory />
                     <Quastions />

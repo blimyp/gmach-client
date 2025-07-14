@@ -39,7 +39,7 @@ export default function Quastions() {
 
     return (
         <div className="quastions-body">
-            <PulseBox><p>כאן תמצאי את כל התשובות!</p></PulseBox>
+            <PulseBox><p>כל התשובות מחכות לך כאן!</p></PulseBox>
             <div className="faq-list">
                 {faq.map((item, index) => (
                     <div className="faq-item" key={index}>

@@ -17,9 +17,9 @@ const NavButtons = () => {
             <LinkButton onClick={() => navigate(routes.home)} text={'דף בית'} />
             <LinkButton onClick={() => navigate(routes.gallery)} text={'גלריה'} />
             {/* <LinkButton onClick={() => navigate(routes.axisOrder)} text={'הזמנה קיימת'} /> */}
-            <LinkButton onClick={() => navigate(routes.newOrder)} text={'הזמנה חדשה'} />
+            <LinkButton onClick={() => navigate(token ? routes.newOrder : routes.login)} text={'הזמנה חדשה'} />
             {token && <LinkButton onClick={() => navigate(routes.orders)} text={'רשימת הזמנות'} />}
-            {!token && <div className="login-button-div"><CustomButton text={'להתחברות'} onClick={() => navigate(routes.login)} /></div>}
+            {!token && <div className="login-button-div"><CustomButton text={'התחברות'} onClick={() => navigate(routes.login)} /></div>}
         </nav>
     );
 };

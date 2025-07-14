@@ -9,7 +9,7 @@
     width: 25px;
     height: 25px;
     border: 5px solid #fff;
-    border-top: 5px solid rgb(108, 79, 41);
+    border-top: 5px solid var(--dark-red);
     border-radius: 50%;
     animation: spin 1s linear infinite;
     transform: translate(-50%, -50%);
