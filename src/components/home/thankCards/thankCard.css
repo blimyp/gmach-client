@@ -39,20 +39,20 @@
 } */
 
 .info-body {
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
 
 .info-section {
-    width: 80vw;
+    width: 100vw;
     margin: auto;
     display: flex;
     flex-direction: row;
     gap: 20px;
     box-sizing: border-box;
     align-items: center;
-    padding: 50px;
-    border: 2px solid var(--dark-red);
-    border-radius: 5px;
+    padding: 50px 10vw;
+    border-top: 2px solid var(--dark-red);
+    border-bottom: 2px solid var(--dark-red);
 }
 
 .info-image {

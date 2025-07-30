@@ -15,7 +15,7 @@ export default function Article() {
             <div className="article-container">
                 <h1>פשוט מאוד לעצב בר – שלבים לעיצוב בר מתוקים מושלם</h1>
 
-                <p>
+                <p className="article-explanation">
                     בר מתוקים הוא אחד מהאלמנטים שהכי תופסים את העין באירוע. זה לא חייב להיות יקר,
                     מסובך או מקצועי – עם כמה שלבים פשוטים וציוד נכון מהגמ"ח, את יכולה לעצב בר יפהפה
                     ומרשים בעצמך.
@@ -29,10 +29,12 @@ export default function Article() {
                             "פרחים", "כחול לתינוק", "שבת חתן"). זה יעזור לך לבחור כלים מתאימים ולקבוע אווירה.
                         </p>
                     </div>
-                    <div className="timeline-indicator"><IoColorWand size={25} color={'var(--dark-red)'} /></div>
+                    <div className="timeline-indicator-container">
+                        <div className="timeline-indicator"><IoColorWand size={25} color={'var(--dark-red)'} /></div>
+                    </div>
                 </div>
 
-                <div className="article-step">
+                <div className="article-step even">
                     <div className="step-content">
                         <h2>בחרי שולחן או פינה נוחה</h2>
                         <p className="article-p">
@@ -40,7 +42,9 @@ export default function Article() {
                             שיהיה נגיש אבל לא יפריע למעבר.
                         </p>
                     </div>
-                    <div className="timeline-indicator" ><RiCake3Line size={25} color={'var(--dark-red)'} /></div>
+                    <div className="timeline-indicator-container">
+                        <div className="timeline-indicator" ><RiCake3Line size={25} color={'var(--dark-red)'} /></div>
+                    </div>
                 </div>
 
                 <div className="article-step">
@@ -51,10 +55,12 @@ export default function Article() {
                             ראנר או קישוט עדין במרכז.
                         </p>
                     </div>
-                    <div className="timeline-indicator"><MdOutlineVideoStable size={30} color={'var(--dark-red)'} /></div>
+                    <div className="timeline-indicator-container">
+                        <div className="timeline-indicator"><MdOutlineVideoStable size={30} color={'var(--dark-red)'} /></div>
+                    </div>
                 </div>
 
-                <div className="article-step">
+                <div className="article-step even">
                     <div className="step-content">
                         <h2>הוסיפי גבהים</h2>
                         <p className="article-p">
@@ -62,7 +68,9 @@ export default function Article() {
                             מגשים מדורגים. כך נוצר מראה "עשיר" ולא שטוח.
                         </p>
                     </div>
-                    <div className="timeline-indicator"><BsBox size={30} color={'var(--dark-red)'} /></div>
+                    <div className="timeline-indicator-container">
+                        <div className="timeline-indicator"><BsBox size={30} color={'var(--dark-red)'} /></div>
+                    </div>
                 </div>
 
                 <div className="article-step">
@@ -74,17 +82,21 @@ export default function Article() {
                             - מקפידים על סימטריה אבל לא נוקשות
                         </p>
                     </div>
-                    <div className="timeline-indicator"><LuCakeSlice size={30} color={'var(--dark-red)'} /></div>
+                    <div className="timeline-indicator-container">
+                        <div className="timeline-indicator"><LuCakeSlice size={30} color={'var(--dark-red)'} /></div>
+                    </div>
                 </div>
 
-                <div className="article-step">
+                <div className="article-step even">
                     <div className="step-content">
                         <h2>הוסיפי טאץ' אישי</h2>
                         <p className="article-p">
                             שלט עם שם החוגג/ת, פרחים קטנים או נרות, כלים בצורת לב/כוכב.
                         </p>
                     </div>
-                    <div className="timeline-indicator" ><GiCloverSpiked size={25} color={'var(--dark-red)'} /></div>
+                    <div className="timeline-indicator-container">
+                        <div className="timeline-indicator" ><GiCloverSpiked size={25} color={'var(--dark-red)'} /></div>
+                    </div>
                 </div>
 
                 <div className="article-step">
@@ -95,10 +107,12 @@ export default function Article() {
                             המלצה מהגמ"ח!
                         </p>
                     </div>
-                    <div className="timeline-indicator" ><SlLike size={25} color={'var(--dark-red)'} /></div>
+                    <div className="timeline-indicator-container">
+                        <div className="timeline-indicator" ><SlLike size={25} color={'var(--dark-red)'} /></div>
+                    </div>
                 </div>
 
-                <div className="article-step">
+                <div className="article-step even">
                     <div className="step-content">
                         <h3>לסיכום:</h3>
                         <p className="article-p">
@@ -107,7 +121,9 @@ export default function Article() {
                             הציוד שזמין בגמ"ח שלנו יעזור לך ליצור עיצוב ברמה גבוהה – בקלות ובשמחה.
                         </p>
                     </div>
-                    <div className="timeline-indicator" ><SlBubble size={25} color={'var(--dark-red)'} /></div>
+                    <div className="timeline-indicator-container">
+                        <div className="timeline-indicator" ><SlBubble size={25} color={'var(--dark-red)'} /></div>
+                    </div>
                 </div>
             </div>
         </div>

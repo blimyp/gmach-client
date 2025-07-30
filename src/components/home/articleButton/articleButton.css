@@ -1,5 +1,5 @@
 .banner-bar {
-    background-color: var(--light-beige);
+    background-color: var(--beige);
     border-top: 1px solid var(--yellow);
     border-bottom: 1px solid var(--yellow);
     padding: 20px 0;
@@ -97,9 +97,9 @@
     animation: slideInOutLeft 3.5s ease-in-out infinite;
     animation-delay: 1s;
     animation-fill-mode: both;
-    color: var(--dark-red);
     margin-bottom: 10px;
     margin-top: 0px;
+    color: var(--dark-red);
 }
 
 .slide-right {

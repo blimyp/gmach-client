@@ -36,7 +36,7 @@ export default function ThankCard({ text, title }) {
         <div className="info-body">
             <div class="info-section">
                 <div class="info-image" >
-                    {/* <BiSolidQuoteAltRight size={200} /> */}|
+                    {/* <BiSolidQuoteAltRight size={200} /> */}
                     <img src="/images/info_image.jpg" alt="info" className="info-bar-image" />
                 </div>
                 <div class="info-text">

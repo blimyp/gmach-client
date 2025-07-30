@@ -41,31 +41,22 @@ const NavButtons = () => {
                 ☰
             </button>
 
-            <nav className='navbar'>
-                {token && <UserNameButton />}
-                <div className='icon-div'><img src="/favicon.png" alt="icon" className="icon-image" /></div>
-                <LinkButton onClick={() => navigate(routes.home)} text={'דף בית'} />
-                <LinkButton onClick={() => navigate(routes.gallery)} text={'גלריה'} />
-                <LinkButton onClick={() => navigate(token ? routes.newOrder : routes.login)} text={'הזמנה חדשה'} />
-                {token && <LinkButton onClick={() => navigate(routes.orders)} text={'רשימת הזמנות'} />}
-                {!token && <div className="login-button-div"><CustomButton text={'התחברות'} onClick={() => navigate(routes.login)} /></div>}
-            </nav>
 
-            {isOpen && (
-                <div className="mobile-dialog-overlay">
-                    <div className="mobile-dialog" ref={dialogRef}>
-                        <button className="close-btn" onClick={() => setIsOpen(false)}>X</button>
-                        <div className="mobile-menu-content">
-                            {token && <UserNameButton isMobile={true} />}
-                            <LinkButton onClick={() => handleNavigate(routes.home)} text={'דף בית'} />
-                            <LinkButton onClick={() => handleNavigate(routes.gallery)} text={'גלריה'} />
-                            <LinkButton onClick={() => handleNavigate(token ? routes.newOrder : routes.login)} text={'הזמנה חדשה'} />
-                            {token && <LinkButton onClick={() => handleNavigate(routes.orders)} text={'רשימת הזמנות'} />}
-                            {!token && <CustomButton text={'התחברות'} onClick={() => handleNavigate(routes.login)} />}
-                        </div>
-                    </div>
+            <div
+                className={`mobile-dialog ${isOpen ? 'open' : ''}`}
+                ref={dialogRef}
+            >
+                <button className="close-btn" onClick={() => setIsOpen(false)}>X</button>
+                <div className="mobile-menu-content">
+                    {token && <UserNameButton isMobile={true} />}
+                    <LinkButton onClick={() => handleNavigate(routes.home)} text={'דף בית'} />
+                    <LinkButton onClick={() => handleNavigate(routes.gallery)} text={'גלריה'} />
+                    <LinkButton onClick={() => handleNavigate(token ? routes.newOrder : routes.login)} text={'הזמנה חדשה'} />
+                    {token && <LinkButton onClick={() => handleNavigate(routes.orders)} text={'רשימת הזמנות'} />}
+                    {!token && <CustomButton text={'התחברות'} onClick={() => handleNavigate(routes.login)} />}
                 </div>
-            )}
+            </div>
+
         </>
     );
 };

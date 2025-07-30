@@ -28,7 +28,9 @@ export default function Home() {
                     <ArticleButton />
                     <ImageTextSplit />
                     <OurStory />
-                    <Quastions />
+                    <div className="quastions-container">
+                        <Quastions />
+                    </div>
                     <ThankCard />
                 </div>
                 <HoleOverlay />

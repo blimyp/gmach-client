@@ -1,8 +1,15 @@
 .quastions-body {
-    padding: 8vh 10vw;
+    padding: 100px 200px;
     text-align: right;
     direction: rtl;
     font-family: inherit;
+    border: 1px var(--yellow) solid;
+    background-color: var(--beige);
+    border-bottom: none;
+    width: 80vw;
+    box-sizing: border-box;
+    margin: auto;
+    border-radius: 40vw 40vw 0 0;
 }
 
 .quastions-body p {
@@ -19,7 +26,7 @@
 
 .faq-item {
     border: 1px solid var(--yellow);
-    border-radius: 5px;
+    border-radius: 30px;
     margin-bottom: 10px;
     background-color: white;
     overflow: hidden;
@@ -39,10 +46,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.faq-question:hover {
-    background-color: var(--light-beige);
+    /* background-color: var(--light-beige); */
 }
 
 .faq-answer {
@@ -50,7 +54,7 @@
     overflow: hidden;
     transition: height 0.4s ease;
     padding: 0 1rem;
-    background-color: var(--light-beige);
+    /* background-color: var(--light-beige); */
 }
 
 .faq-answer.open {

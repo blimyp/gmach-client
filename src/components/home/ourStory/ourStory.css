@@ -1,19 +1,23 @@
 .our-story-body {
-    border: 1px solid var(--yellow);
+    /* border: 1px solid var(--yellow);
     margin: auto;
     width: 80vw;
+    height: 40vw;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
-    overflow: hidden;
-}
-
-
-
-.our_story_container {
+    overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    padding: 50px 0;
+    width: 80vw;
+    height: 600px;
+    margin: auto;
+    padding: 100px 0;
+    box-sizing: border-box;
     background-color: var(--dark-red);
+    border-radius: 0 0 40vw 40vw;
 }
 
 .text {

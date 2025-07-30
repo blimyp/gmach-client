@@ -9,6 +9,22 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.text-gradient {
+  background: linear-gradient(to left, #503d05, #ac9304, #503d05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient {
+  background: linear-gradient(to left, #503d05, #ac9304, #503d05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

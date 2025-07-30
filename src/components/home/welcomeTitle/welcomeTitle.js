@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SlideInFromRight from '../../common/animationFromRight/animationFromRight';
 import './welcomeTitle.css';
 
+const images = [
+    '/images/background.JPG',
+    '/images/image4.png',
+    '/images/gallery6.jpg',
+];
+
 export default function WelcomeTitle() {
+    const [imageIndex, setImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000); // כל 2 שניות
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="welcome-container">
             <img
-                src="/images/background.JPG"
+                src={images[imageIndex]}
                 alt="Welcome Background"
                 className="welcome-image"
             />
@@ -20,7 +36,6 @@ export default function WelcomeTitle() {
                 <SlideInFromRight delay={1500}>
                     <p>עם מגוון עשיר של ציוד – כדי שלא תצטרכו להתפשר על כלום</p>
                 </SlideInFromRight>
-                {/* <CustomButton onClick={scrollToBottom} text={'מהרו לתפוס תאריך'} /> */}
             </div>
         </div>
     );
