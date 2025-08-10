@@ -39,7 +39,7 @@ export default function Quastions() {
 
     return (
         <div className="quastions-body">
-            <PulseBox><p>כל התשובות מחכות לך כאן!</p></PulseBox>
+            <PulseBox><p className="gradient-text">כל התשובות מחכות לך כאן!</p></PulseBox>
             <div className="faq-list">
                 {faq.map((item, index) => (
                     <div className="faq-item" key={index}>
@@ -52,7 +52,7 @@ export default function Quastions() {
                     </div>
                 ))}
             </div>
-            <PulseBox><p>לצפייה באירועים קודמים</p></PulseBox>
+            <PulseBox><p className="gradient-text">לצפייה באירועים קודמים</p></PulseBox>
             <div className="button-div">
                 <CustomButton text={'לחץ כאן'} onClick={() => { navigate(routes.gallery) }} />
             </div>

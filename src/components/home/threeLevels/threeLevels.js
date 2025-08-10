@@ -8,17 +8,17 @@ import { IoMail } from "react-icons/io5";
 export default function LoanSteps() {
     const steps = [
         {
-            icon: <IoMail size={30} color={'var(--dark-red)'} />,
+            icon: <IoMail size={30} color={'var(--dark-blue)'} />,
             title: 'מזמינים באתר',
             description: 'ממלאים את טופס ההשלמה כאן באתר עם כל הפרטים הרלוונטיים',
         },
         {
-            icon: <FaPhone size={30} color={'var(--dark-red)'} />,
+            icon: <FaPhone size={30} color={'var(--dark-blue)'} />,
             title: 'ממתינים לטלפון',
             description: 'יש לחכות לטלפון שהכלים נשמרו לכם לתאריך שבחרתם (זה יכול לקחת כמה ימים)',
         },
         {
-            icon: <FaCar size={30} color={'var(--dark-red)'} />,
+            icon: <FaCar size={30} color={'var(--dark-blue)'} />,
             title: 'באים לקחת',
             description: 'מגיעים ביום של האירוע בשעות בוקר - צהריים לקחת את הכלים עם רכב או עם עגלה גדולה',
         },

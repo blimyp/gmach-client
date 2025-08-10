@@ -1,11 +1,14 @@
 .banner-bar {
-    background-color: var(--beige);
-    border-top: 1px solid var(--yellow);
-    border-bottom: 1px solid var(--yellow);
-    padding: 20px 0;
+    background: radial-gradient(circle, var(--blue), var(--dark-blue));
+    padding: 50px 0;
     overflow: hidden;
     display: flex;
     justify-content: center;
+    font-size: 1.3rem;
+    width: 90vw;
+    margin: auto;
+    border-radius: 50vh;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.726); 
 }
 
 .banner-content {
@@ -97,14 +100,16 @@
     animation: slideInOutLeft 3.5s ease-in-out infinite;
     animation-delay: 1s;
     animation-fill-mode: both;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-top: 0px;
-    color: var(--dark-red);
+    color: var(--yellow);
+    font-weight: 50;
 }
 
 .slide-right {
     animation: slideInOutRight 3.5s ease-in-out infinite;
     animation-delay: 1s;
     animation-fill-mode: both;
-    color: var(--dark-red);
+    color: var(--yellow);
+    font-weight: 50;
 }

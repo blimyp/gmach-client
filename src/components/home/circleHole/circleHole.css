@@ -11,7 +11,7 @@
     width: 70vh;
     height: 70vh;
     transform: translate(-50%, -50%);
-    border: 5px solid var(--dark-red);
+    border: 5px solid var(--blue);
     border-radius: 50%;
     background-color: transparent;
     box-shadow: 0 0 0 9999px rgba(255, 255, 255, 0.801);

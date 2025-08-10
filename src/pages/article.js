@@ -30,7 +30,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator"><IoColorWand size={25} color={'var(--dark-red)'} /></div>
+                        <div className="timeline-indicator"><IoColorWand size={25} color={'var(--blue)'} /></div>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator" ><RiCake3Line size={25} color={'var(--dark-red)'} /></div>
+                        <div className="timeline-indicator" ><RiCake3Line size={25} color={'var(--blue)'} /></div>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator"><MdOutlineVideoStable size={30} color={'var(--dark-red)'} /></div>
+                        <div className="timeline-indicator"><MdOutlineVideoStable size={30} color={'var(--blue)'} /></div>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator"><BsBox size={30} color={'var(--dark-red)'} /></div>
+                        <div className="timeline-indicator"><BsBox size={30} color={'var(--blue)'} /></div>
                     </div>
                 </div>
 
@@ -83,7 +83,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator"><LuCakeSlice size={30} color={'var(--dark-red)'} /></div>
+                        <div className="timeline-indicator"><LuCakeSlice size={30} color={'var(--blue)'} /></div>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator" ><GiCloverSpiked size={25} color={'var(--dark-red)'} /></div>
+                        <div className="timeline-indicator" ><GiCloverSpiked size={25} color={'var(--blue)'} /></div>
                     </div>
                 </div>
 
@@ -108,7 +108,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator" ><SlLike size={25} color={'var(--dark-red)'} /></div>
+                        <div className="timeline-indicator" ><SlLike size={25} color={'var(--blue)'} /></div>
                     </div>
                 </div>
 
@@ -122,7 +122,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator" ><SlBubble size={25} color={'var(--dark-red)'} /></div>
+                        <div className="timeline-indicator" ><SlBubble size={25} color={'var(--blue)'} /></div>
                     </div>
                 </div>
             </div>

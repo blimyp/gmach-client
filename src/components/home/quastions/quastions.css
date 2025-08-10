@@ -1,22 +1,19 @@
 .quastions-body {
-    padding: 100px 200px;
+    padding: 150px 200px;
     text-align: right;
     direction: rtl;
-    font-family: inherit;
-    border: 1px var(--yellow) solid;
-    background-color: var(--beige);
+    background-color: var(--light-blue);
     border-bottom: none;
-    width: 80vw;
+    width: 90vw;
     box-sizing: border-box;
     margin: auto;
-    border-radius: 40vw 40vw 0 0;
+    border-radius: 45vw 45vw 0 0;
 }
 
 .quastions-body p {
     text-align: center;
     font-weight: bold;
     font-size: 30px;
-    color: var(--dark-red);
 }
 
 .faq-list {
@@ -27,7 +24,7 @@
 .faq-item {
     border: 1px solid var(--yellow);
     border-radius: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: white;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -41,12 +38,12 @@
     padding: 1rem;
     font-size: 1rem;
     font-weight: bold;
-    color: var(--dark-red);
+    color: var(--blue);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: var(--light-beige); */
+    /* background-color: var(--beige); */
 }
 
 .faq-answer {
@@ -54,7 +51,7 @@
     overflow: hidden;
     transition: height 0.4s ease;
     padding: 0 1rem;
-    /* background-color: var(--light-beige); */
+    /* background-color: var(--beige); */
 }
 
 .faq-answer.open {
@@ -63,7 +60,7 @@
 
 .faq-answer p {
     font-size: 1rem;
-    color: var(--dark-red);
+    color: var(--blue);
     line-height: 1.6;
     text-align: start;
 }

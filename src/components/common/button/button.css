@@ -1,7 +1,7 @@
 .dark-button {
     padding: 5px 10px;
     border-radius: 50px;
-    background-color: var(--dark-red);
+    background-color: var(--yellow);
     border: 2px white solid;
     font-size: 20px;
     color: white;
@@ -14,9 +14,9 @@
     padding: 5px 10px;
     border-radius: 50px;
     background-color: white;
-    border: 2px var(--dark-red) solid;
+    border: 2px var(--yellow) solid;
     font-size: 20px;
-    color: var(--dark-red);
+    color: var(--yellow);
     cursor: pointer;
     position: relative;
     transition: background-color 0.2s ease, color 0.2s ease;
@@ -24,10 +24,10 @@
 
 .dark-button:hover {
     background-color: white;
-    color: var(--dark-red);
+    color: var(--yellow);
 }
 
 .light-button:hover {
-    background-color: var(--dark-red);
+    background-color: var(--yellow);
     color: white;
 }

@@ -1,3 +1,11 @@
+.gradient-text {
+    background: linear-gradient(to left, var(--dark-blue), var(--blue), var(--dark-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
 .homepage-container {
     position: relative;
     width: 100%;
@@ -24,6 +32,16 @@
     background-color: white;
 }
 
-.quastions-container {
+.grey-container {
+    background-color: var(--light-grey);
+}
+
+.top-container {
     margin-top: -80px;
+    position: relative;
+}
+
+.top-layer-container {
+    position: relative;
+    z-index: 2;
 }

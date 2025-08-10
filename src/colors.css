@@ -1,8 +1,10 @@
 :root {
-    --beige: #e9cb90;
+    --light-blue: #e5eaeb;
     --button-beige: #efd6a6;
-    --light-beige: rgb(251, 245, 234);
-    --dark-red: #65190f;
-    --text-grey: #444;
-    --yellow: rgb(237, 183, 34);
+    --beige: rgb(251, 245, 234);
+    --blue: #107d96;
+    --dark-blue: #10425b;
+    --text-grey: rgb(120, 118, 118);
+    --light-grey: rgb(232, 232, 232);
+    --yellow: rgb(225, 171, 44);
 }

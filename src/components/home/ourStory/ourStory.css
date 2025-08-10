@@ -1,28 +1,24 @@
+.our-story-background-div {
+    padding-top: 100px;
+}
+
 .our-story-body {
-    /* border: 1px solid var(--yellow);
-    margin: auto;
-    width: 80vw;
-    height: 40vw;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    overflow: hidden; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 80vw;
-    height: 600px;
+    width: 90vw;
     margin: auto;
-    padding: 100px 0;
+    padding: 150px 0;
     box-sizing: border-box;
-    background-color: var(--dark-red);
-    border-radius: 0 0 40vw 40vw;
+    background: radial-gradient(circle, var(--blue), var(--dark-blue));
+    border-radius: 0 0 45vw 45vw;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.726);
 }
 
 .text {
     margin: 20px 100px;
-    color: var(--beige);
+    color: var(--yellow);
 }
 
 .icon_container {

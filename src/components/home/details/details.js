@@ -26,7 +26,7 @@ const details = [
 export default function Details() {
     return (
         <div className="details-body">
-            <PulseBox><h2>פרטי התקשרות</h2></PulseBox>
+            <PulseBox><h2 className="gradient-text">פרטי התקשרות:</h2></PulseBox>
             <div className="details-container">
                 {details.map((item, index) => (
                     <div className="detail-item" key={index}>

@@ -23,14 +23,14 @@ export default function Home() {
             />
 
             <div className="content-overlay">
-                <div className='white-bg-container'>
-                    <WelcomeTitle />
-                    <ArticleButton />
+                <WelcomeTitle />
+                <div className='grey-container'>
+                    <div className="top-container"><ArticleButton /></div>
                     <ImageTextSplit />
-                    <OurStory />
-                    <div className="quastions-container">
-                        <Quastions />
-                    </div>
+                </div>
+                <div className='white-bg-container'>
+                    <div className='top-layer-container'><OurStory /></div>
+                    <div className="top-container"><Quastions /></div>
                     <ThankCard />
                 </div>
                 <HoleOverlay />

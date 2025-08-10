@@ -10,15 +10,7 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(to left, #503d05, #ac9304, #503d05);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient {
-  background: linear-gradient(to left, #503d05, #ac9304, #503d05);
+  background: linear-gradient(to left, rgb(45, 48, 100), var(--blue), rgb(45, 48, 100));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
