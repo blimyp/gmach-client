@@ -21,6 +21,10 @@
     color: var(--yellow);
 }
 
+p.text {
+    font-size: 1.2rem;
+}
+
 .icon_container {
     width: 100px;
     height: 100px;

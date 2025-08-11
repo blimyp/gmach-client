@@ -4,7 +4,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     width: 90vw;
     margin: auto;
     border-radius: 50vh;
@@ -42,7 +42,7 @@
         transform: translateX(0);
     }
 
-    70% {
+    75% {
         opacity: 1;
         transform: translateX(0);
     }
@@ -79,7 +79,7 @@
         transform: translateX(0);
     }
 
-    70% {
+    75% {
         opacity: 1;
         transform: translateX(0);
     }
