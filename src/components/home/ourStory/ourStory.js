@@ -8,7 +8,7 @@ export default function OurStory() {
             <div className='our-story-body'>
                 <div className="our_story_container">
                     <div className='icon_container'>
-                        <RotateImage src="/favicon.png" alt="תמונה שמסתובבת בגלילה" />
+                        <RotateImage src="/images/yellowLogo.png" alt="תמונה שמסתובבת בגלילה" />
                     </div>
                     <TextAnimation>
                         <h2 className="text">הגמ"ח לכלי בר מתוקים – הסיפור שלנו</h2>

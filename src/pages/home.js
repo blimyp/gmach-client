@@ -8,6 +8,7 @@ import Quastions from '../components/home/quastions/quastions';
 import Details from '../components/home/details/details';
 import HoleOverlay from '../components/home/circleHole/circleHole';
 import ArticleButton from '../components/home/articleButton/articleButton';
+import SomeGalleryPictures from '../components/home/someGalleryPictures/someGalleryPictures';
 
 
 
@@ -31,6 +32,7 @@ export default function Home() {
                 <div className='white-bg-container'>
                     <div className='top-layer-container'><OurStory /></div>
                     <div className="top-container"><Quastions /></div>
+                    {/* <SomeGalleryPictures /> */}
                     <ThankCard />
                 </div>
                 <HoleOverlay />

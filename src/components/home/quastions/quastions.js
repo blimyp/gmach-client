@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import CustomButton from "../../common/button/button";
 import "./quastions.css";
-import { useNavigate } from 'react-router-dom';
-import routes from "../../../constants/routes";
+
 import PulseBox from "../../common/pulseBox";
 
 
@@ -30,7 +28,7 @@ const faq = [
 ];
 
 export default function Quastions() {
-    const navigate = useNavigate();
+
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggle = (index) => {
@@ -51,10 +49,6 @@ export default function Quastions() {
                         </div>
                     </div>
                 ))}
-            </div>
-            <PulseBox><p className="gradient-text">לצפייה באירועים קודמים</p></PulseBox>
-            <div className="button-div">
-                <CustomButton text={'לחץ כאן'} onClick={() => { navigate(routes.gallery) }} />
             </div>
         </div>
     );
