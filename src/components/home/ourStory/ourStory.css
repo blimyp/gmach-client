@@ -13,7 +13,7 @@
     box-sizing: border-box;
     background: radial-gradient(circle, var(--blue), var(--dark-blue));
     border-radius: 0 0 45vw 45vw;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.726);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
 }
 
 .text {
@@ -39,4 +39,16 @@ p.text {
     width: auto;
     height: 100%;
     object-fit: contain;
+}
+
+@media (max-width: 800px) {
+    .text {
+        margin: 20px 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .text {
+        margin: 20px 20px;
+    }
 }

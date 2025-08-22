@@ -64,3 +64,21 @@
     line-height: 1.6;
     text-align: start;
 }
+
+@media (max-width: 1400px) {
+    .quastions-body {
+        padding: 150px 100px;
+    }
+}
+
+@media (max-width: 800px) {
+    .quastions-body {
+        padding: 150px 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .quastions-body {
+        padding: 150px 20px;
+    }
+}

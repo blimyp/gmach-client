@@ -23,9 +23,10 @@
   border-radius: 50vh;
   border: 1px solid var(--yellow);
   font-size: 1rem;
-  color: var(--dark-blue);
+  color: var(--yellow);
   overflow: hidden;
   z-index: 0;
+  background: radial-gradient(circle, var(--blue), var(--dark-blue));
   transition: color 0.6s ease;
 }
 
@@ -56,13 +57,13 @@
 .detail-item:hover>.detail-icon,
 .detail-item:hover>.detail-text {
   transform: translateX(-10%);
-  color: var(--yellow);
+  /* color: var(--yellow); */
 }
 
 
 .detail-icon {
   font-size: 1.4rem;
-  color: var(--dark-blue);
+  color: var(--yellow);
   margin-left: 0.7rem;
 }
 

@@ -34,6 +34,8 @@
 
 .grey-container {
     background-color: var(--light-grey);
+    background-image: url('../../public/images/lines5.png');
+    background-size: 150%;
 }
 
 .top-container {
