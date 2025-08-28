@@ -3,16 +3,13 @@ import OurStory from '../components/home/ourStory/ourStory';
 import ThankCard from '../components/home/thankCards/thankCard';
 import LoanSteps from '../components/home/threeLevels/threeLevels';
 import WelcomeTitle from '../components/home/welcomeTitle/welcomeTitle';
-import './home.css'
+import './home.css';
 import Quastions from '../components/home/quastions/quastions';
 import Details from '../components/home/details/details';
 import HoleOverlay from '../components/home/circleHole/circleHole';
 import ArticleButton from '../components/home/articleButton/articleButton';
 import SomeGalleryPictures from '../components/home/someGalleryPictures/someGalleryPictures';
-
-
-
-
+import CirclePopup from '../components/circlePopup/circlePopup';
 
 export default function Home() {
     return (
@@ -41,7 +38,8 @@ export default function Home() {
                     <LoanSteps />
                 </div>
             </div>
-        </div>
 
+            <CirclePopup />
+        </div>
     );
 }

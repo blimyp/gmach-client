@@ -21,6 +21,7 @@ const images = [
     '/images/gallery13.jpg',
     '/images/gallery14.jpg',
     '/images/gallery15.jpg',
+    '/images/gallery16.png',
 ];
 
 export default function Gallery() {
