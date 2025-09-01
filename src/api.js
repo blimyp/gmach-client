@@ -6,6 +6,9 @@ export const createOrderRequest = (data) =>
 export const getAllOrdersRequest = () =>
     axiosInstance.get('/orders');
 
+export const getOrdersDatesRequest = () =>
+    axiosInstance.get('/orders/getOrdersDates');
+
 export const deleteOrderRequest = (id) =>
     axiosInstance.delete(`/orders/${id}`);
 

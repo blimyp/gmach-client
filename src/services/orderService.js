@@ -1,4 +1,4 @@
-import { createOrderRequest, getAllOrdersRequest } from '../api';
+import { createOrderRequest, getAllOrdersRequest, getOrdersDatesRequest } from '../api';
 
 export const createOrder = async ({ orderData }) => {
     try {
@@ -19,4 +19,17 @@ export const getOrders = async () => {
         alert(err);
     }
 };
+
+export const getOrdersDates = async () => {
+    try {
+        const response = await getOrdersDatesRequest();
+        const dates = response.data;
+        const uniqueDates = [...new Set(dates.map(date => date.split('T')[0]))];
+        return uniqueDates;
+    } catch (err) {
+        console.error('שגיאה בקבלת תאריכי הזמנות:', err);
+        alert(err);
+    }
+};
+
 

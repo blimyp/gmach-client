@@ -10,6 +10,7 @@ import HoleOverlay from '../components/home/circleHole/circleHole';
 import ArticleButton from '../components/home/articleButton/articleButton';
 import SomeGalleryPictures from '../components/home/someGalleryPictures/someGalleryPictures';
 import CirclePopup from '../components/circlePopup/circlePopup';
+import OrdersDatesCalender from '../components/home/calender/calender';
 
 export default function Home() {
     return (
@@ -33,6 +34,7 @@ export default function Home() {
                     <ThankCard />
                 </div>
                 <HoleOverlay />
+                <OrdersDatesCalender />
                 <div className='white-bg-container'>
                     <Details />
                     <LoanSteps />
