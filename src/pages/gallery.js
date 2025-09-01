@@ -1,28 +1,30 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './gallery.css';
+import { IoMdHeartEmpty } from "react-icons/io";
+
 
 const images = [
-    '/images/image1.png',
-    '/images/image2.png',
-    '/images/image4.png',
-    '/images/background.jpg',
-    '/images/gallery1.jpg',
-    '/images/gallery2.jpg',
-    '/images/gallery3.jpg',
-    '/images/gallery4.jpg',
-    '/images/gallery5.jpg',
-    '/images/gallery6.jpg',
-    '/images/gallery7.jpg',
-    '/images/gallery8.jpg',
-    '/images/gallery9.jpg',
-    '/images/gallery10.jpg',
-    '/images/gallery11.jpg',
-    '/images/gallery12.jpg',
-    '/images/gallery13.jpg',
-    '/images/gallery14.jpg',
-    '/images/gallery15.jpg',
-    '/images/gallery16.png',
-    '/images/gallery17.png',
+    { src: '/images/image1.png', description: 'בר שחור עץ' },
+    { src: '/images/image2.png', description: 'נדנדה עץ' },
+    { src: '/images/image4.png', description: 'בר שחור עץ' },
+    { src: '/images/background.jpg', description: 'בר זהב' },
+    { src: '/images/gallery1.jpg', description: 'נדנדה עץ' },
+    { src: '/images/gallery2.jpg', description: 'כלי זהב לבר' },
+    { src: '/images/gallery3.jpg', description: 'בר זהב' },
+    { src: '/images/gallery4.jpg', description: 'מרכזי שולחן זהב' },
+    { src: '/images/gallery5.jpg', description: 'בר שחור עץ' },
+    { src: '/images/gallery6.jpg', description: 'בר זהב + זכוכיות' },
+    { src: '/images/gallery7.jpg', description: 'נדנדה עץ' },
+    { src: '/images/gallery8.jpg', description: 'בר שחור עץ' },
+    { src: '/images/gallery9.jpg', description: 'כלים שחור עץ לבר' },
+    { src: '/images/gallery10.jpg', description: 'כלים שחור עץ לבר' },
+    { src: '/images/gallery11.jpg', description: 'כלים שחור עץ לבר' },
+    { src: '/images/gallery12.jpg', description: 'בר זהב' },
+    { src: '/images/gallery13.jpg', description: 'כלים זהב לבר או למרכז שולחן' },
+    { src: '/images/gallery14.jpg', description: 'כלים זהב לבר' },
+    { src: '/images/gallery15.jpg', description: 'כלי זהב + זכוכית לבר או למרכז שולחן' },
+    { src: '/images/gallery16.png', description: 'בר שחור עץ' },
+    { src: '/images/gallery17.png', description: 'בר זהב' },
 ];
 
 export default function Gallery() {
@@ -34,7 +36,7 @@ export default function Gallery() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // כדי שזה יקרה רק פעם אחת
+                    observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
@@ -51,16 +53,26 @@ export default function Gallery() {
             <h2 className="gradient-text gallery-title">גלריית האירועים שלנו</h2>
 
             <div className="gallery-grid">
-                {images.map((img, index) => (
-                    <div className='image-div' key={index}>
-                        <img
-                            ref={el => imageRefs.current[index] = el}
-                            src={img}
-                            alt={`gallery ${index}`}
-                            className="gallery-image"
-                            onClick={() => setSelectedImage(img)}
-                        />
+                {images.map((item, index) => (
+                    <div className='gallery-item' key={index}>
+                        <div className="gallery-image-wrapper">
+                            <img
+                                ref={el => imageRefs.current[index] = el}
+                                src={item.src}
+                                alt={`gallery ${index}`}
+                                className="gallery-image"
+                                onClick={() => setSelectedImage(item.src)}
+                            />
+                        </div>
+                        <div className="gallery-description-container">
+                            <p className="gallery-description">{item.description}</p>
+                            <button className="gallery-button">
+                                <IoMdHeartEmpty size={30} />
+                                <span className="tooltip-text">סמן כמועדף</span>
+                            </button>
+                        </div>
                     </div>
+
                 ))}
             </div>
 
