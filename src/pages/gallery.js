@@ -22,6 +22,7 @@ const images = [
     '/images/gallery14.jpg',
     '/images/gallery15.jpg',
     '/images/gallery16.png',
+    '/images/gallery17.png',
 ];
 
 export default function Gallery() {
@@ -47,7 +48,7 @@ export default function Gallery() {
 
     return (
         <div className="gallery-page">
-            <h2 className="gallery-title">גלריית האירועים שלנו</h2>
+            <h2 className="gradient-text gallery-title">גלריית האירועים שלנו</h2>
 
             <div className="gallery-grid">
                 {images.map((img, index) => (

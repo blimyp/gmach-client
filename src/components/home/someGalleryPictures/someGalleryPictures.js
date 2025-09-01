@@ -39,9 +39,8 @@ export default function SomeGalleryPictures({ images }) {
                     </div>
                 ))}
             </div>
-            {/* <PulseBox><p className="gradient-text">לצפייה באירועים קודמים:</p></PulseBox> */}
             <div className="button-div">
-                <CustomButton text={'לצפייה באירועים קודמים'} onClick={() => { navigate(routes.gallery) }} darkButton={'true'} />
+                <CustomButton text={'לצפייה באירועים קודמים'} onClick={() => { navigate(routes.gallery) }} />
             </div>
         </div>
     );

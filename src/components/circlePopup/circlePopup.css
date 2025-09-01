@@ -11,10 +11,12 @@
     z-index: 9999;
     opacity: 0;
     transition: opacity 0.3s ease;
+    visibility: hidden;
 }
 
 .popup-overlay.visible {
     opacity: 1;
+    visibility: visible;
 }
 
 .popup-circle {
