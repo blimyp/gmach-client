@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import { getOrdersDates } from "../../../services/orderService";
 import PulseBox from "../../common/pulseBox";
 import "./calender.css";
+import routes from "../../../constants/routes";
 
 export default function OrdersDatesCalender() {
     const [dates, setDates] = useState([]);
-    const [selectedDate, setSelectedDate] = useState(new Date());
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchDates = async () => {
@@ -17,7 +19,6 @@ export default function OrdersDatesCalender() {
         fetchDates();
     }, []);
 
-    // פונקציה לעיצוב תאריך בפורמט yyyy-mm-dd בלי בעיות Timezone
     const formatDate = (date) => {
         const d = new Date(date);
         const year = d.getFullYear();
@@ -36,6 +37,12 @@ export default function OrdersDatesCalender() {
         return null;
     };
 
+    const handleDateChange = (date) => {
+        const formatted = formatDate(date);
+        navigate(`${routes.newOrder}/${formatted}`);
+
+    };
+
     return (
         <div className="dates-container">
             <PulseBox>
@@ -43,8 +50,7 @@ export default function OrdersDatesCalender() {
             </PulseBox>
             <div className="calender-div">
                 <Calendar
-                    onChange={setSelectedDate}
-                    value={selectedDate}
+                    onChange={handleDateChange}
                     tileClassName={tileClassName}
                 />
             </div>

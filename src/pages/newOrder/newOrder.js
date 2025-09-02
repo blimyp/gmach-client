@@ -1,4 +1,5 @@
-import React, { useState, useRef, useContext } from 'react';
+import React, { useState, useRef, useContext, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import './newOrder.css';
 import { createOrder } from '../../services/orderService';
 import emailjs from "@emailjs/browser";
@@ -7,12 +8,19 @@ import { AuthContext } from '../../contexts/authContext';
 
 export default function NewOrder() {
     const form = useRef();
+    const { date } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         orderDate: '',
         orderDescription: '',
     });
     const { user } = useContext(AuthContext);
+
+    useEffect(() => {
+        if (date) {
+            setFormData(prev => ({ ...prev, orderDate: date }));
+        }
+    }, [date]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -43,7 +51,6 @@ export default function NewOrder() {
             customerName: user.name,
         };
         emailjs.send("service_knbxmbg", "template_b4ii71d", templateParams, "a9upb4z0sKTekMhII")
-
     };
 
     return (
@@ -53,13 +60,26 @@ export default function NewOrder() {
                 <h2>טופס השלמת הזמנה</h2>
                 <label>
                     תאריך הזמנה:
-                    <input type="date" name="orderDate" value={formData.orderDate} onChange={handleChange} required />
+                    <input
+                        type="date"
+                        name="orderDate"
+                        value={formData.orderDate}
+                        onChange={handleChange}
+                        required
+                    />
                 </label>
 
                 <label>
                     תאור פריטים:
-                    <input type="description" name="orderDescription" value={formData.orderDescription} onChange={handleChange} required />
+                    <input
+                        type="text"
+                        name="orderDescription"
+                        value={formData.orderDescription}
+                        onChange={handleChange}
+                        required
+                    />
                 </label>
+
                 <button type="submit" disabled={isLoading}>
                     שליחה
                     {isLoading ? (<Spinner />) : ('')}
@@ -67,5 +87,4 @@ export default function NewOrder() {
             </form>
         </div>
     );
-
 }

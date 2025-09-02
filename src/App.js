@@ -21,6 +21,7 @@ function App() {
           <Route path={routes.orders} element={<Orders />} />
           <Route path={routes.login} element={<LoginForm />} />
           <Route path={routes.newOrder} element={<NewOrder />} />
+          <Route path={`${routes.newOrder}/:date`} element={<NewOrder />} />
         </Routes>
       </div>
     </Router>

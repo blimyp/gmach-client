@@ -1,0 +1,146 @@
+.gallery-item {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    break-inside: avoid;
+}
+
+.gallery-description-container {
+    display: flex;
+    flex-direction: column;
+    /* כדי שהתיאור וכפתור המידע יהיו אחד מעל השני */
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.gallery-description {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+.gallery-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 230, 0);
+    font-size: 30px;
+    position: relative;
+}
+
+.gallery-button .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 8px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.gallery-button:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.favorite-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+}
+
+.gallery-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: scale(0.6);
+    opacity: 0;
+}
+
+.gallery-image.visible {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.gallery-image:hover {
+    transform: scale(1.2);
+}
+
+.gallery-item-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* כפתור מידע נוסף */
+.info-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.info-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.info-button .tooltip-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 8px;
+    position: absolute;
+    bottom: 125%;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.info-button:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.info-text {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    text-align: right;
+}
+
+.info-text.open {
+    max-height: 50px;
+    opacity: 1;
+}

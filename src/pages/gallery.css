@@ -18,93 +18,16 @@
     column-gap: 20px;
 }
 
-.gallery-item {
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+@media (max-width: 1000px) {
+    .gallery-grid {
+        column-count: 2;
+    }
 }
 
-.gallery-description-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 5px;
-}
-
-.gallery-description {
-    font-size: 14px;
-    color: #333;
-    margin: 0;
-}
-
-.gallery-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #ff4d4f;
-    font-size: 30px;
-    position: relative;
-}
-
-.gallery-button .tooltip-text {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px 8px;
-    position: absolute;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 12px;
-    z-index: 10;
-}
-
-.gallery-button .tooltip-text::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-}
-
-.gallery-button:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-.gallery-image-wrapper {
-    overflow: hidden;
-}
-
-.gallery-image {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 1s ease, opacity 1s ease;
-    transform: scale(0.6);
-    opacity: 0;
-}
-
-
-.gallery-image.visible {
-    transform: scale(1);
-    opacity: 1;
-}
-
-.gallery-image:hover {
-    transform: scale(1.2);
+@media (max-width: 600px) {
+    .gallery-grid {
+        column-count: 1;
+    }
 }
 
 .gallery-modal {
@@ -124,16 +47,4 @@
     max-width: 90%;
     max-height: 90%;
     border-radius: 10px;
-}
-
-@media (max-width: 1000px) {
-    .gallery-grid {
-        column-count: 2;
-    }
-}
-
-@media (max-width: 600px) {
-    .gallery-grid {
-        column-count: 1;
-    }
 }
