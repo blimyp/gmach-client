@@ -65,7 +65,7 @@
     width: 100%;
 }
 
-.info-text {
+.info-text-div {
     flex: 1;
     font-size: 18px;
     color: var(--text-grey);

@@ -1,5 +1,9 @@
+.banner-body {
+    padding-top: 100px;
+}
+
 .banner-bar {
-    background: radial-gradient(circle, var(--blue), var(--dark-blue));
+    background: radial-gradient(circle, var(--blue), var(--dark-blue), var(--blue), var(--dark-blue));
     padding: 50px 0;
     overflow: hidden;
     display: flex;
@@ -8,7 +12,8 @@
     width: 90vw;
     margin: auto;
     border-radius: 50vh;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5); 
+    border: 2px solid var(--yellow);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
 }
 
 .banner-content {

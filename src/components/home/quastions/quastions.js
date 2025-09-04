@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./quastions.css";
-
 import PulseBox from "../../common/pulseBox";
-
+import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
 
 const faq = [
     {
@@ -42,7 +41,12 @@ export default function Quastions() {
                 {faq.map((item, index) => (
                     <div className="faq-item" key={index}>
                         <button className="faq-question" onClick={() => toggle(index)}>
-                            {item.question}
+                            <span>{item.question}</span>
+                            {openIndex === index ? (
+                                <FiMinusCircle size={20} />
+                            ) : (
+                                <FiPlusCircle size={20} />
+                            )}
                         </button>
                         <div className={`faq-answer ${openIndex === index ? "open" : ""}`}>
                             <p>{item.answer}</p>

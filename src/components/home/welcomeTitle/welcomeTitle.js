@@ -11,7 +11,7 @@ export default function WelcomeTitle() {
                 alt="Welcome Background"
                 className="welcome-image"
             />
-            <div className="welcome-text">
+            <div className="welcome-text-div">
                 <SlideInFromRight>
                     <h1>גמ"ח כלים לבר</h1>
                 </SlideInFromRight>

@@ -24,7 +24,7 @@ export default function Home() {
             <div className="content-overlay">
                 <WelcomeTitle />
                 <div className='grey-container'>
-                    <div className="top-container"><ArticleButton /></div>
+                    <ArticleButton />
                     <ImageTextSplit />
                 </div>
                 <div className='white-bg-container'>

@@ -39,7 +39,7 @@ export default function ThankCard({ text, title }) {
                     {/* <BiSolidQuoteAltRight size={200} /> */}
                     <img src="/images/info_image.jpg" alt="info" className="info-bar-image" />
                 </div>
-                <div class="info-text">
+                <div class="info-text-div">
                     <TextAnimation>
                         <p>
                             הגמ"ח שלנו אינו רק מקום לקבל בו שירות – הוא בית של נתינה, חמלה ואכפתיות. לאורך השנים, פועל הגמ"ח מתוך תחושת שליחות עמוקה לעזור לכל אדם באשר הוא, מבלי הבדל, ובאהבה גדולה.

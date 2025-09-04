@@ -1,5 +1,6 @@
 import React from 'react';
 import TextAnimation from '../../common/textAnimation/textAnimation';
+import YellowLine from '../../common/yellowLine';
 import './events.css';
 
 export default function ImageTextSplit() {
@@ -10,6 +11,7 @@ export default function ImageTextSplit() {
                     <div className="split-content right">
                         <TextAnimation>
                             <h2 className="split-title gradient-text">היוקרה שבפרטים הקטנים</h2>
+                            <YellowLine />
                             <p className="split-description">
                                 האירוע שלך מתחיל באווירה – וכל כלי מוסיף לה.
                                 עם סטים מהודרים, כוסות זכוכית בעיצוב אלגנטי ומגשים נוצצים –
@@ -29,6 +31,7 @@ export default function ImageTextSplit() {
                     <div className="split-content left">
                         <TextAnimation>
                             <h2 className="split-title gradient-text">כלים שעושים את הרושם</h2>
+                            <YellowLine />
                             <p className="split-description">
                                 גם באירוע ביתי – מגיע לך סטייל של אולם יוקרה.
                                 אנחנו מציעים כלי הגשה בעיצוב קלאסי ונקי,

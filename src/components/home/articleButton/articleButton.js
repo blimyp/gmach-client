@@ -9,15 +9,17 @@ export default function ArticleButton() {
     const handleClick = () => navigate(routes.article);
 
     return (
-        <div className="banner-bar">
-            <div className="banner-content">
-                <h2 className="slide-right">
-                    רוצה להרים בר מתוקים מושקע ומרשים – בלי כאב ראש?
-                </h2>
-                <h2 className="slide-left">
-                    למדריך המלא שלב אחרי שלב:
-                </h2>
-                <CustomButton onClick={handleClick} text={"לחץ כאן"} />
+        <div className="banner-body">
+            <div className="banner-bar">
+                <div className="banner-content">
+                    <h2 className="slide-right">
+                        רוצה להרים בר מתוקים מושקע ומרשים – בלי כאב ראש?
+                    </h2>
+                    <h2 className="slide-left">
+                        למדריך המלא שלב אחרי שלב:
+                    </h2>
+                    <CustomButton onClick={handleClick} text={"לחץ כאן"} />
+                </div>
             </div>
         </div>
     );
