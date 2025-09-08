@@ -25,15 +25,30 @@ const details = [
 
 export default function Details() {
     return (
-        <div className="details-body">
-            <PulseBox><h2 className="gradient-text">פרטי התקשרות:</h2></PulseBox>
-            <div className="details-container">
-                {details.map((item, index) => (
-                    <div className="detail-item" key={index}>
-                        <span className="detail-icon">{item.icon}</span>
-                        <span className="detail-text">{item.text}</span>
-                    </div>
-                ))}
+        <div className="details-wrapper">
+            {/* צד ימין - פרטי ההתקשרות */}
+            <div className="details-body">
+                <PulseBox>
+                    <h2 className="gradient-text">פרטי התקשרות:</h2>
+                </PulseBox>
+                <div className="details-container">
+                    {details.map((item, index) => (
+                        <div className="detail-item" key={index}>
+                            <span className="detail-icon">{item.icon}</span>
+                            <span className="detail-text">{item.text}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* צד שמאל - מפה */}
+            <div className="map-container">
+                <iframe
+                    title="google-map"
+                    src="https://www.google.com/maps?q=אלעד,בן%20עוזיאל%2026&output=embed"
+                    allowFullScreen
+                    loading="lazy"
+                ></iframe>
             </div>
         </div>
     );

@@ -1,5 +1,34 @@
+/* קונטיינר ראשי - חלוקה ימין/שמאל */
+.details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 5vw;
+  direction: rtl;
+}
+
+/* צד שמאל - מפה */
+.map-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;           /* גובה מלא, יורש מהקונטיינר הראשי */
+  position: relative;    
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 .details-body {
-  padding: 100px 0;
+  flex: 1;
 }
 
 .details-body h2 {
@@ -57,9 +86,7 @@
 .detail-item:hover>.detail-icon,
 .detail-item:hover>.detail-text {
   transform: translateX(-10%);
-  /* color: var(--yellow); */
 }
-
 
 .detail-icon {
   font-size: 1.4rem;
@@ -69,4 +96,17 @@
 
 .detail-text {
   flex: 1;
+}
+
+/* רספונסיביות למסכים קטנים */
+@media (max-width: 768px) {
+  .details-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-container iframe {
+    max-width: 100%;
+    height: 300px;
+  }
 }
