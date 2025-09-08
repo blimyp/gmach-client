@@ -28,14 +28,13 @@ export default function OrdersDatesCalender() {
     };
 
     const tileClassName = ({ date, view }) => {
-        if (view === 'month') {
+        if (view === 'month' && Array.isArray(dates)) {
             const dateStr = formatDate(date);
-            if (dates.includes(dateStr)) {
-                return 'date-taken';
-            }
+            return dates.includes(dateStr) ? 'date-taken' : null;
         }
         return null;
     };
+
 
     const handleDateChange = (date) => {
         const formatted = formatDate(date);

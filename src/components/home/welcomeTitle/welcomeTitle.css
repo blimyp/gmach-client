@@ -18,7 +18,7 @@
 .welcome-text-div {
     position: relative;
     z-index: 1;
-    top: 30vh;
+    top: 40vh;
     right: 5vw;
     transform: translateY(-50%);
     width: 100vw;

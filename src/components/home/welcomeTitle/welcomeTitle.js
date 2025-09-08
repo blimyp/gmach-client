@@ -1,5 +1,6 @@
 import React from 'react';
 import SlideInFromRight from '../../common/animationFromRight/animationFromRight';
+import LogoAnimation from './logoAnimation';
 import './welcomeTitle.css';
 
 
@@ -18,6 +19,7 @@ export default function WelcomeTitle() {
                 <SlideInFromRight fromRight={false} delay={1000}>
                     <p>עוזרים לכם להפוך כל אירוע למושלם ובלתי נשכח.</p>
                 </SlideInFromRight>
+                <LogoAnimation />
             </div>
         </div>
     );
