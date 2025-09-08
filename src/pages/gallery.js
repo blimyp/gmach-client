@@ -1,34 +1,40 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { getGalleryImagesRequest } from '../api';
 import './gallery.css';
 import GalleryCard from './galleryCard';
 
-export const images = [
-    { src: '/images/image1.png', description: 'בר שחור עץ', category: 'BLACK_WOOD' },
-    { src: '/images/image2.png', description: 'נדנדה עץ', category: 'BLACK_WOOD' },
-    { src: '/images/image4.png', description: 'בר שחור עץ', category: 'BLACK_WOOD' },
-    { src: '/images/background.jpg', description: 'בר זהב', category: 'Gold' },
-    { src: '/images/gallery1.jpg', description: 'נדנדה עץ', category: 'BLACK_WOOD' },
-    { src: '/images/gallery2.jpg', description: 'כלי זהב לבר', category: 'Gold' },
-    { src: '/images/gallery3.jpg', description: 'בר זהב', category: 'Gold' },
-    { src: '/images/gallery4.jpg', description: 'מרכזי שולחן זהב', category: 'Gold' },
-    { src: '/images/gallery5.jpg', description: 'בר שחור עץ', category: 'BLACK_WOOD' },
-    { src: '/images/gallery6.jpg', description: 'בר זהב + זכוכיות', category: 'GLASS' },
-    { src: '/images/gallery7.jpg', description: 'נדנדה עץ', category: 'BLACK_WOOD' },
-    { src: '/images/gallery8.jpg', description: 'בר שחור עץ', category: 'BLACK_WOOD' },
-    { src: '/images/gallery9.jpg', description: 'כלים שחור עץ לבר', category: 'BLACK_WOOD' },
-    { src: '/images/gallery10.jpg', description: 'כלים שחור עץ לבר', category: 'BLACK_WOOD' },
-    { src: '/images/gallery11.jpg', description: 'כלים שחור עץ לבר', category: 'BLACK_WOOD' },
-    { src: '/images/gallery12.jpg', description: 'בר זהב', category: 'Gold' },
-    { src: '/images/gallery13.jpg', description: 'כלים זהב לבר או למרכז שולחן', category: 'Gold' },
-    { src: '/images/gallery14.jpg', description: 'כלים זהב לבר', category: 'Gold' },
-    { src: '/images/gallery15.jpg', description: 'כלי זהב + זכוכית לבר או למרכז שולחן', category: 'GLASS' },
-    { src: '/images/gallery16.png', description: 'בר שחור עץ', category: 'BLACK_WOOD' },
-    { src: '/images/gallery17.png', description: 'בר זהב', category: 'Gold' },
-];
+export const getImages = async () => {
+    try {
+        const response = await getGalleryImagesRequest();
+        return response.data;
+    } catch (err) {
+        console.error('שגיאה בקבלת תמונות:', err);
+        throw err.response?.data || { message: 'שגיאה כללית בשליפת התמונות' };
+    }
+};
 
 export default function Gallery() {
     const [selectedImage, setSelectedImage] = useState(null);
+    const [images, setImages] = useState([]);
+
     const imageRefs = useRef([]);
+
+    useEffect(() => {
+        imageRefs.current = imageRefs.current.slice(0, images.length);
+    }, [images.length]);
+
+    useEffect(() => {
+        const fetchImages = async () => {
+            try {
+                const data = await getImages();
+                setImages(data);
+            } catch (error) {
+                console.error('שגיאה בטעינת התמונות:', error);
+            }
+        };
+
+        fetchImages();
+    }, []);
 
     return (
         <div className="gallery-page">
@@ -37,11 +43,10 @@ export default function Gallery() {
             <div className="gallery-grid">
                 {images.map((item, index) => (
                     <GalleryCard
-                        key={index}
                         item={item}
                         index={index}
                         imageRefs={imageRefs}
-                        onImageClick={setSelectedImage}
+                        onImageClick={() => setSelectedImage(item.src)}
                     />
                 ))}
             </div>
@@ -54,4 +59,3 @@ export default function Gallery() {
         </div>
     );
 }
-

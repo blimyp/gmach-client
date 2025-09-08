@@ -1,12 +1,26 @@
-import React, { useState, useEffect } from 'react';
-// import { BsHandThumbsUp } from "react-icons/bs";
+import React, { useState, useEffect, useContext } from 'react';
+import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { PiCaretCircleDown } from "react-icons/pi";
+import { toggleLike } from '../api';
 import { getCategoryByValue } from '../constants/standsCategories';
+import { AuthContext } from '../contexts/authContext';
 import './galleryCard.css';
 
 export default function GalleryCard({ item, index, imageRefs, onImageClick }) {
+    const { user } = useContext(AuthContext);
     const [showInfo, setShowInfo] = useState(false);
+    const [liked, setLiked] = useState(item.likedBy.includes(user._id));
     const category = getCategoryByValue(item.category);
+
+
+    const handleToggleLike = async () => {
+        try {
+            await toggleLike(item._id, user._id, !liked);
+            setLiked(prev => !prev);
+        } catch (error) {
+            console.error("Error toggling like:", error);
+        }
+    };
 
     useEffect(() => {
         const img = imageRefs.current[index];
@@ -36,10 +50,15 @@ export default function GalleryCard({ item, index, imageRefs, onImageClick }) {
                     onClick={() => onImageClick(item.src)}
                 />
                 {/* כפתור מועדף מעל התמונה בצד שמאל עליון */}
-                {/* <button className="gallery-button favorite-button">
-                    <BsHandThumbsUp size={40} />
-                    <span className="tooltip-text">סמן כמועדף</span>
-                </button> */}
+                <button
+                    className="gallery-button favorite-button"
+                    onClick={handleToggleLike}
+                >
+                    {liked ? <IoMdHeart size={30} /> : <IoMdHeartEmpty size={30} />}
+                    <span className="tooltip-text">
+                        {liked ? "הסר מהמועדפים" : "סמן כמועדף"}
+                    </span>
+                </button>
             </div>
 
             <div className="gallery-description-container">

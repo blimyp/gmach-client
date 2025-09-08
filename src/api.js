@@ -36,3 +36,11 @@ export const deleteUserRequest = async (id) => {
     const response = await axiosInstance.delete(`/users/${id}`);
     return response.data;
 };
+
+export const getGalleryImagesRequest = () =>
+    axiosInstance.get('/images');
+
+export const toggleLike = async (imageId, userId, like) => {
+    const response = await axiosInstance.post('/images/like', { imageId, userId, like });
+    return response;
+};
