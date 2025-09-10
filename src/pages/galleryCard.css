@@ -1,7 +1,7 @@
 .gallery-item {
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     break-inside: avoid;
 }
@@ -141,6 +141,13 @@
 }
 
 .info-text.open {
-    max-height: 50px;
+    max-height: 100px;
     opacity: 1;
+}
+
+.extra-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
 }

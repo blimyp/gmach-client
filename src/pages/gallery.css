@@ -15,7 +15,7 @@
 
 .gallery-grid {
     column-count: 3;
-    column-gap: 20px;
+    column-gap: 30px;
 }
 
 @media (max-width: 1000px) {

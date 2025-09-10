@@ -16,7 +16,9 @@ export default function GalleryCard({ item, index, imageRefs, onImageClick }) {
     const handleToggleLike = async () => {
         try {
             await toggleLike(item._id, user._id, !liked);
-            setLiked(prev => !prev);
+            setLiked(prevLiked => {
+                return !prevLiked;
+            });
         } catch (error) {
             console.error("Error toggling like:", error);
         }
@@ -75,9 +77,14 @@ export default function GalleryCard({ item, index, imageRefs, onImageClick }) {
                         </button>
                     </div>
                     {/* הטקסט של הקטגוריה עכשיו מתחת לכפתור ולתיאור */}
-                    <p className={`info-text ${showInfo ? 'open' : ''}`}>
-                        קטגוריה: {category.text}
-                    </p>
+                    <div className={`info-text ${showInfo ? 'open' : ''}`}>
+                        <p>קטגוריה: {category.text}</p>
+                        <div className="extra-info">
+                            <IoMdHeart size={20} style={{ marginRight: '5px', color: 'red' }} />
+                            <span>{item.likedBy.length} אנשים בחרו במוצר הזה</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

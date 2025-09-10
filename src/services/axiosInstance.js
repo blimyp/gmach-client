@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    // baseURL: 'https://gmach.onrender.com/api',
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'https://gmach.onrender.com/api',
+    // baseURL: 'http://localhost:5000/api',
 });
 
 axiosInstance.interceptors.request.use(
