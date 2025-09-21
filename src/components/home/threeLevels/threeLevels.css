@@ -23,11 +23,12 @@
     height: 30px;
     padding: 20px;
     background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     object-fit: cover;
     border-radius: 50%;
-    border: 2px var(--dark-blue) solid;
+    /* border: 2px var(--dark-blue) solid; */
     margin-bottom: 16px;
-    transition: transform 0.3s ease;
+    transition: transform 1s ease;
 }
 
 .circle-icon:hover {

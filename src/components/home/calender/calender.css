@@ -18,9 +18,8 @@
     border: none;
     border-radius: 15px;
     max-width: 90vw;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
-    border: 1px solid var(--dark-blue);
     font-family: Arial, sans-serif;
 }
 

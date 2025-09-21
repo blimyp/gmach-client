@@ -9,13 +9,13 @@ import './galleryCard.css';
 export default function GalleryCard({ item, index, imageRefs, onImageClick }) {
     const { user } = useContext(AuthContext);
     const [showInfo, setShowInfo] = useState(false);
-    const [liked, setLiked] = useState(item.likedBy.includes(user._id));
+    const [liked, setLiked] = useState(item.likedBy.includes(user?._id));
     const category = getCategoryByValue(item.category);
 
 
     const handleToggleLike = async () => {
         try {
-            await toggleLike(item._id, user._id, !liked);
+            await toggleLike(item._id, user?._id, !liked);
             setLiked(prevLiked => {
                 return !prevLiked;
             });

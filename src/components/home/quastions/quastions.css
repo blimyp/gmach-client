@@ -23,6 +23,7 @@
 
 .faq-item {
     border: 1px solid var(--yellow);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 30px;
     margin-bottom: 20px;
     background-color: white;

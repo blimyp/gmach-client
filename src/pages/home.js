@@ -2,14 +2,13 @@ import ImageTextSplit from '../components/home/events/events';
 import OurStory from '../components/home/ourStory/ourStory';
 import ThankCard from '../components/home/thankCards/thankCard';
 import LoanSteps from '../components/home/threeLevels/threeLevels';
-import WelcomeTitle from '../components/home/welcomeTitle/welcomeTitle';
+import FirstSection from '../components/home/firstSection/firstSection';
 import './home.css';
 import Quastions from '../components/home/quastions/quastions';
 import Details from '../components/home/details/details';
 import HoleOverlay from '../components/home/circleHole/circleHole';
 import ArticleButton from '../components/home/articleButton/articleButton';
 import SomeGalleryPictures from '../components/home/someGalleryPictures/someGalleryPictures';
-import CirclePopup from '../components/circlePopup/circlePopup';
 import OrdersDatesCalender from '../components/home/calender/calender';
 
 export default function Home() {
@@ -22,7 +21,7 @@ export default function Home() {
             />
 
             <div className="content-overlay">
-                <WelcomeTitle />
+                <FirstSection />
                 <div className='grey-container'>
                     <ArticleButton />
                     <ImageTextSplit />
@@ -41,7 +40,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <CirclePopup />
+            {/* <CirclePopup /> */}
         </div>
     );
 }
