@@ -6,7 +6,7 @@ export default function CirclePopup({ onClose }) {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        setTimeout(() => setVisible(true), 50);
+        setTimeout(() => setVisible(true), 5000);
     }, []);
 
     const handleClose = () => {

@@ -7,14 +7,14 @@ import { BsBox } from "react-icons/bs";
 import { LuCakeSlice } from "react-icons/lu";
 import { GiCloverSpiked } from "react-icons/gi";
 import { SlLike } from "react-icons/sl";
-import { SlBubble } from "react-icons/sl";
+import YellowLine from "../components/common/yellowLine";
 
 export default function Article() {
     return (
         <div className="article-body">
             <div className="article-container">
                 <h1>פשוט מאוד לעצב בר – שלבים לעיצוב בר מתוקים מושלם</h1>
-
+                <YellowLine />
                 <p className="article-explanation">
                     בר מתוקים הוא אחד מהאלמנטים שהכי תופסים את העין באירוע. זה לא חייב להיות יקר,
                     מסובך או מקצועי – עם כמה שלבים פשוטים וציוד נכון מהגמ"ח, את יכולה לעצב בר יפהפה
@@ -30,7 +30,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator"><IoColorWand size={25} color={'var(--blue)'} /></div>
+                        <div className="timeline-indicator"><IoColorWand size={25} color={'var(--yellow)'} /></div>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator" ><RiCake3Line size={25} color={'var(--blue)'} /></div>
+                        <div className="timeline-indicator" ><RiCake3Line size={25} color={'var(--yellow)'} /></div>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator"><MdOutlineVideoStable size={30} color={'var(--blue)'} /></div>
+                        <div className="timeline-indicator"><MdOutlineVideoStable size={30} color={'var(--yellow)'} /></div>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator"><BsBox size={30} color={'var(--blue)'} /></div>
+                        <div className="timeline-indicator"><BsBox size={30} color={'var(--yellow)'} /></div>
                     </div>
                 </div>
 
@@ -83,7 +83,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator"><LuCakeSlice size={30} color={'var(--blue)'} /></div>
+                        <div className="timeline-indicator"><LuCakeSlice size={30} color={'var(--yellow)'} /></div>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator" ><GiCloverSpiked size={25} color={'var(--blue)'} /></div>
+                        <div className="timeline-indicator" ><GiCloverSpiked size={25} color={'var(--yellow)'} /></div>
                     </div>
                 </div>
 
@@ -108,24 +108,24 @@ export default function Article() {
                         </p>
                     </div>
                     <div className="timeline-indicator-container">
-                        <div className="timeline-indicator" ><SlLike size={25} color={'var(--blue)'} /></div>
+                        <div className="timeline-indicator" ><SlLike size={25} color={'var(--yellow)'} /></div>
                     </div>
                 </div>
 
-                <div className="article-step even">
-                    <div className="step-content">
-                        <h3>לסיכום:</h3>
+                {/* <div className="article-step even"> */}
+                    {/* <div className="step-content"> */}
+                        <h2>לסיכום:</h2>
                         <p className="article-p">
                             לא צריך תקציב גבוה או ניסיון בעיצוב – עם קצת תכנון וגישה לכלים מתאימים –
                             את יכולה ליצור בר מתוקים שכולם יצלמו!<br />
                             הציוד שזמין בגמ"ח שלנו יעזור לך ליצור עיצוב ברמה גבוהה – בקלות ובשמחה.
                         </p>
                     </div>
-                    <div className="timeline-indicator-container">
-                        <div className="timeline-indicator" ><SlBubble size={25} color={'var(--blue)'} /></div>
-                    </div>
-                </div>
-            </div>
+                    {/* <div className="timeline-indicator-container">
+                        <div className="timeline-indicator" ><SlBubble size={25} color={'var(--yellow)'} /></div>
+                    </div> */}
+                {/* </div> */}
+            {/* </div> */}
         </div>
     );
 }

@@ -9,7 +9,7 @@ import routes from '../../../constants/routes';
 export default function SomeGalleryPictures({ images }) {
     const imagesList = [
         "/images/background.jpg",
-        "/images/image4.png",
+        "/images/gallery22.png",
         "/images/Gallery6.jpg",
     ];
 

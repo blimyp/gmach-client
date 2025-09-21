@@ -10,6 +10,7 @@ import HoleOverlay from '../components/home/circleHole/circleHole';
 import ArticleButton from '../components/home/articleButton/articleButton';
 import SomeGalleryPictures from '../components/home/someGalleryPictures/someGalleryPictures';
 import OrdersDatesCalender from '../components/home/calender/calender';
+import CirclePopup from '../components/circlePopup/circlePopup';
 
 export default function Home() {
     return (
@@ -40,7 +41,7 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* <CirclePopup /> */}
+            <CirclePopup />
         </div>
     );
 }

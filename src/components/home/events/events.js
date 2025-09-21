@@ -20,13 +20,13 @@ export default function ImageTextSplit() {
                         </TextAnimation>
                     </div>
                     <div className="split-image">
-                        <img src="/images/image1.png" alt="icon" className="image" />
+                        <img src="/images/gallery21.png" alt="icon" className="image" />
                     </div>
                 </div>
 
                 <div className="image-text-split">
                     <div className="split-image">
-                        <img src="/images/image2.png" alt="icon" className="image" />
+                        <img src="/images/gallery20.png" alt="icon" className="image" />
                     </div>
                     <div className="split-content left">
                         <TextAnimation>
