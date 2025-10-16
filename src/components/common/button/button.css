@@ -11,10 +11,14 @@
 }
 
 .light-button {
-    padding: 10px 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     border-radius: 50px;
     background-color: white;
-    border: 2px var(--yellow) solid;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     font-size: 20px;
     color: var(--yellow);
     cursor: pointer;
@@ -29,5 +33,25 @@
 
 .light-button:hover {
     background-color: var(--yellow);
-    color: white;
+    color: var(--blue);
+}
+
+
+.light-button:hover .arrow-div{
+    background-color: var(--yellow);
+    color: var(--blue);
+    background-color: white;
+}
+
+.arrow-div{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--yellow);
+    color: var(--blue);
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 10px;
+    transition: background-color 0.5s ease,
 }

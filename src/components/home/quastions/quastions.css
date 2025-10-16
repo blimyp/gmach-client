@@ -22,7 +22,7 @@
 }
 
 .faq-item {
-    border: 1px solid var(--yellow);
+    /* border: 1px solid var(--yellow); */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 30px;
     margin-bottom: 20px;
@@ -36,7 +36,7 @@
     border: none;
     width: 100%;
     text-align: right;
-    padding: 1rem;
+    padding: 5px 5px 5px 15px;
     font-size: 1rem;
     font-weight: bold;
     color: var(--blue);
@@ -46,6 +46,13 @@
     align-items: center;
     /* background-color: var(--beige); */
 }
+
+.faq-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 
 .faq-answer {
     height: 0;
@@ -64,6 +71,16 @@
     color: var(--blue);
     line-height: 1.6;
     text-align: start;
+}
+
+.questio-icon {
+    background-color: var(--yellow);
+    border-radius: 50%;
+    display: flex;               /* מרכזים את התוכן */
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
 }
 
 @media (max-width: 1400px) {
