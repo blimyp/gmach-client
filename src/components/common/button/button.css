@@ -8,6 +8,7 @@
     cursor: pointer;
     position: relative;
     transition: background 0.5s ease, color 0.5s ease;
+    font-family: 'Rubik', sans-serif !important;
 }
 
 .light-button {
@@ -24,6 +25,7 @@
     cursor: pointer;
     position: relative;
     transition: background-color 0.5s ease, color 0.5s ease;
+    font-family: 'Rubik', sans-serif !important;
 }
 
 .dark-button:hover {

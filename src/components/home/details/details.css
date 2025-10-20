@@ -96,6 +96,7 @@
 
 .detail-text {
   flex: 1;
+  font-weight: bold;
 }
 
 /* רספונסיביות למסכים קטנים */

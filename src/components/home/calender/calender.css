@@ -20,7 +20,7 @@
     max-width: 90vw;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
-    font-family: Arial, sans-serif;
+    font-family: 'Rubik', sans-serif !important;
 }
 
 .react-calendar__navigation button {

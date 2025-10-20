@@ -108,7 +108,6 @@
     margin-bottom: 20px;
     margin-top: 0px;
     color: var(--yellow);
-    font-weight: 50;
 }
 
 .slide-right {
@@ -116,5 +115,4 @@
     animation-delay: 1s;
     animation-fill-mode: both;
     color: var(--yellow);
-    font-weight: 50;
 }
