@@ -1,9 +1,9 @@
 export const StandsCategories = Object.freeze({
-    Gold: { value: "Gold", text: "זהב" },
-    BLACK_WOOD: { value: "BLACK_WOOD", text: "שחור עץ" },
-    GLASS: { value: "GLASS", text: "זכוכית" },
+    Gold: { value: 1, text: "זהב" },
+    BLACK_WOOD: { value: 2, text: "שחור עץ" },
+    GLASS: { value: 3, text: "זכוכית" },
 });
 
 export function getCategoryByValue(value) {
-    return Object.values(StandsCategories).find(cat => cat.value === value);
+    return Object.values(StandsCategories).find(cat => cat.value === Number(value));
 }

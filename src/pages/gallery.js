@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { getGalleryImagesRequest } from '../api';
+import Title from '../components/common/title';
 import './gallery.css';
 import GalleryCard from './galleryCard';
 
@@ -38,7 +39,7 @@ export default function Gallery() {
 
     return (
         <div className="gallery-page">
-            <h2 className="gradient-text gallery-title">גלריית האירועים שלנו</h2>
+            <Title text={"גלריית אירועים"} />
 
             <div className="gallery-grid">
                 {images.map((item, index) => (

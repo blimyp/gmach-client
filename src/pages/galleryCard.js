@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
-import { PiCaretCircleDown } from "react-icons/pi";
 import { toggleLike } from '../api';
 import { getCategoryByValue } from '../constants/standsCategories';
 import { AuthContext } from '../contexts/authContext';
@@ -8,7 +7,6 @@ import './galleryCard.css';
 
 export default function GalleryCard({ item, index, imageRefs, onImageClick }) {
     const { user } = useContext(AuthContext);
-    const [showInfo, setShowInfo] = useState(false);
     const [liked, setLiked] = useState(item.likedBy.includes(user?._id));
     const category = getCategoryByValue(item.category);
 
@@ -67,18 +65,9 @@ export default function GalleryCard({ item, index, imageRefs, onImageClick }) {
                 <div className="info-button-wrapper">
                     <div className="gallery-item-info-row">
                         <p className="gallery-description">{item.description}</p>
-                        {/* כפתור מידע נוסף */}
-                        <button
-                            className="info-button"
-                            onClick={() => setShowInfo(prev => !prev)}
-                        >
-                            <PiCaretCircleDown size={30} />
-                            <span className="tooltip-text">מידע נוסף</span>
-                        </button>
                     </div>
-                    {/* הטקסט של הקטגוריה עכשיו מתחת לכפתור ולתיאור */}
-                    <div className={`info-text ${showInfo ? 'open' : ''}`}>
-                        <p>קטגוריה: {category.text}</p>
+                    <div className={`info-text open`}>
+                        <p>קטגוריה: {category?.text}</p>
                         <div className="extra-info">
                             <IoMdHeart size={20} style={{ marginRight: '5px', color: 'red' }} />
                             <span>{item.likedBy.length} אנשים בחרו במוצר הזה</span>
