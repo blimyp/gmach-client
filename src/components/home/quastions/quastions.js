@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./quastions.css";
-import PulseBox from "../../common/pulseBox";
 import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
 import { PiHandCoins } from "react-icons/pi";
 import { IoCartOutline } from "react-icons/io5";
@@ -48,7 +47,6 @@ export default function Quastions() {
 
     return (
         <div className="quastions-body">
-            {/* <PulseBox><p className="gradient-text">כל התשובות מחכות לך כאן!</p></PulseBox> */}
             <Title text={"כל התשובות מחכות לך כאן!"} />
             <div className="faq-list">
                 {faq.map((item, index) => (
