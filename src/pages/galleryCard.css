@@ -12,11 +12,11 @@
     align-items: flex-start;
     gap: 5px;
     margin-top: 5px;
-}
-
-.gallery-description {
     font-size: 14px;
     color: #333;
+}
+
+.gallery-description-container>p {
     margin: 0;
 }
 
@@ -31,15 +31,15 @@
 
 .gallery-button .tooltip-text {
     visibility: hidden;
-    width: 120px;
+    width: 80px;
     background-color: black;
     color: #fff;
     text-align: center;
     border-radius: 5px;
     padding: 5px 8px;
     position: absolute;
-    bottom: 125%;
-    left: 50%;
+    bottom: -25%;
+    left: 70%;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
@@ -83,70 +83,15 @@
     transform: scale(1.2);
 }
 
-.gallery-item-info-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-}
-
-/* כפתור מידע נוסף */
-.info-button-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.info-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-}
-
-.info-button .tooltip-text {
-    visibility: hidden;
-    width: 100px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px 8px;
-    position: absolute;
-    bottom: 125%;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 12px;
-    z-index: 10;
-}
-
-.info-button:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-.info-text {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #333;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-    text-align: right;
-}
-
-.info-text.open {
-    max-height: 100px;
-    opacity: 1;
-}
-
 .extra-info {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-top: 5px;
+}
+
+.gallery-image-SKU {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 50vh;
+    color: white;
 }

@@ -62,19 +62,13 @@ export default function GalleryCard({ item, index, imageRefs, onImageClick }) {
             </div>
 
             <div className="gallery-description-container">
-                <div className="info-button-wrapper">
-                    <div className="gallery-item-info-row">
-                        <p className="gallery-description">{item.description}</p>
-                    </div>
-                    <div className={`info-text open`}>
-                        <p>קטגוריה: {category?.text}</p>
-                        <div className="extra-info">
-                            <IoMdHeart size={20} style={{ marginRight: '5px', color: 'red' }} />
-                            <span>{item.likedBy.length} אנשים בחרו במוצר הזה</span>
-                        </div>
-                    </div>
-
+                <p className="gallery-description">{item.description}</p>
+                <p>קטגוריה: {category?.text}</p>
+                <div className="extra-info">
+                    <IoMdHeart size={20} style={{ marginRight: '5px', color: 'red' }} />
+                    <span>{item.likedBy.length} אנשים בחרו במוצר הזה</span>
                 </div>
+                <span className='gallery-image-SKU'>מק"ט {item?.SKU}</span>
             </div>
         </div>
     );
