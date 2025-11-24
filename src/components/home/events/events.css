@@ -57,7 +57,7 @@
     font-size: 2vw;
     font-weight: bold;
     color: var(--blue);
-    margin-bottom: 1.5vw;
+    margin-bottom: 0;
 }
 
 .split-description {

@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import { getOrdersDates } from "../../../services/orderService";
-import PulseBox from "../../common/pulseBox";
 import "./calender.css";
 import routes from "../../../constants/routes";
+import Title from "../../common/title";
 
 export default function OrdersDatesCalender() {
     const [dates, setDates] = useState([]);
@@ -44,9 +44,7 @@ export default function OrdersDatesCalender() {
 
     return (
         <div className="dates-container">
-            <PulseBox>
-                <p className="dates-title gradient-text">מהרו לתפוס תאריך</p>
-            </PulseBox>
+            <Title text={"מהרו לתפוס תאריך"} />
             <div className="calender-div">
                 <Calendar
                     onChange={handleDateChange}

@@ -2,7 +2,7 @@ import React from "react";
 import { FaPhone, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import "./details.css";
-import PulseBox from "../../common/pulseBox";
+import Title from "../../common/title";
 
 const details = [
     {
@@ -28,9 +28,7 @@ export default function Details() {
         <div className="details-wrapper">
             {/* צד ימין - פרטי ההתקשרות */}
             <div className="details-body">
-                <PulseBox>
-                    <h2 className="gradient-text">פרטי התקשרות:</h2>
-                </PulseBox>
+                <Title text={"פרטי התקשרות:"} />
                 <div className="details-container">
                     {details.map((item, index) => (
                         <div className="detail-item" key={index}>
