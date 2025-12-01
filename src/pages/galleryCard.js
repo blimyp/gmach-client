@@ -4,6 +4,7 @@ import { toggleLike } from '../api';
 import { getCategoryByValue } from '../constants/standsCategories';
 import { AuthContext } from '../contexts/authContext';
 import './galleryCard.css';
+import { HiMagnifyingGlassPlus } from "react-icons/hi2";
 
 export default function GalleryCard({ item, index, imageRefs, onImageClick }) {
     const { user } = useContext(AuthContext);
@@ -69,6 +70,9 @@ export default function GalleryCard({ item, index, imageRefs, onImageClick }) {
                     <span>{item.likedBy.length} אנשים בחרו במוצר הזה</span>
                 </div>
                 <span className='gallery-image-SKU'>מק"ט {item?.SKU}</span>
+                <button className='glass-button' onClick={() => onImageClick(item.src)}>
+                    <HiMagnifyingGlassPlus size={20}/>
+                </button>
             </div>
         </div>
     );
