@@ -51,7 +51,7 @@
 }
 
 .gallery-image-SKU {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--dark-blue);
     padding: 5px;
     border-radius: 50vh;
     color: white;

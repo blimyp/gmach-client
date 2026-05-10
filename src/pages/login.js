@@ -6,6 +6,7 @@ import { AuthContext } from '../contexts/authContext';
 import { useNavigate } from 'react-router-dom';
 import routes from '../constants/routes';
 import Spinner from '../components/common/spinner/spinner';
+import Title from "../components/common/title";
 
 function LoginForm({ routeToNavigate }) {
     const [isSignUp, setIsSignUp] = useState(false);
@@ -49,50 +50,48 @@ function LoginForm({ routeToNavigate }) {
 
     return (
         <div className="login-form-wrapper">
-            <img src="/images/background.jpg" alt="background" className="background-image" />
-            <div className="login-form-container">
-                <form className="login-form" onSubmit={handleSubmit}>
-                    {isSignUp && (
-                        <>
-                            <input
-                                type="text"
-                                placeholder="שם מלא"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                            />
-                            <input
-                                type="tel"
-                                placeholder="טלפון"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                            />
-                        </>
-                    )}
-                    <input
-                        type="email"
-                        placeholder="אימייל"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input
-                        type="password"
-                        placeholder="סיסמה"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <button type={"submit"} >{isSignUp ? 'הרשמה' : 'התחברות'} {isLoading ? (<Spinner />) : ('')} </button>
-                    {error && <p className="error-message">{error}</p>}
-                    <div className="register-prompt">
-                        <span>{isSignUp ? 'כבר רשום?' : 'לא רשום עדיין?'}</span>
-                        <LinkButton
-                            onClick={() => setIsSignUp(!isSignUp)}
-                            text={isSignUp ? 'להתחברות' : 'להרשמה'}
-                            color={'black'}
-                            fontSize={'0.8rem'}
+            <Title text="התחברות" />
+            <form className="login-form" onSubmit={handleSubmit}>
+                {isSignUp && (
+                    <>
+                        <input
+                            type="text"
+                            placeholder="שם מלא"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                         />
-                    </div>
-                </form>
-            </div>
+                        <input
+                            type="tel"
+                            placeholder="טלפון"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                        />
+                    </>
+                )}
+                <input
+                    type="email"
+                    placeholder="אימייל"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                    type="password"
+                    placeholder="סיסמה"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <button type={"submit"} >{isSignUp ? 'הרשמה' : 'התחברות'} {isLoading ? (<Spinner />) : ('')} </button>
+                {error && <p className="error-message">{error}</p>}
+                <div className="register-prompt">
+                    <span>{isSignUp ? 'כבר רשום?' : 'לא רשום עדיין?'}</span>
+                    <LinkButton
+                        onClick={() => setIsSignUp(!isSignUp)}
+                        text={isSignUp ? 'להתחברות' : 'להרשמה'}
+                        color={'black'}
+                        fontSize={'0.8rem'}
+                    />
+                </div>
+            </form>
         </div>
     );
 }
