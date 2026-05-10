@@ -3,8 +3,6 @@
     min-height: 100vh;
     overflow: hidden;
     display: flex;
-    /* justify-content: center;  מרכז אופקית */
-    /* align-items: center;    */
 }
 
 .background-img {
@@ -27,6 +25,9 @@
     border-radius: 16px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .order-form h2 {
@@ -34,19 +35,10 @@
     color: black;
 }
 
-.order-form label {
-    display: block;
-    margin-bottom: 16px;
-    font-weight: 500;
-}
-
-.order-form input {
+.new_order_input {
     width: 100%;
     padding: 10px 0;
     margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
 }
 
 .order-form button {
@@ -66,4 +58,9 @@
 
 .order-form button:hover {
     background-color: var(--light-blue);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }

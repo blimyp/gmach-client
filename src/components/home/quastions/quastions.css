@@ -1,13 +1,18 @@
+.questions-section{
+    padding-top: 100px;
+}
+
 .quastions-body {
-    padding: 150px 200px;
+    padding: 50px 200px;
     text-align: right;
     direction: rtl;
-    background-color: var(--light-blue);
+    background: linear-gradient(to top, var(--dark-blue), var(--blue), white);
     border-bottom: none;
-    width: 90vw;
+    width: 70vw;
     box-sizing: border-box;
     margin: auto;
-    border-radius: 50vw 50vw 0 0;
+    margin-bottom: 100px;
+    border-radius: 25px;
     text-align: center;
 }
 
@@ -24,7 +29,7 @@
 
 .faq-item {
     /* border: 1px solid var(--yellow); */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     margin-bottom: 30px;
     background-color: white;
@@ -78,7 +83,8 @@
 .questio-icon {
     background-color: var(--yellow);
     border-radius: 50%;
-    display: flex;               /* מרכזים את התוכן */
+    display: flex;
+    /* מרכזים את התוכן */
     align-items: center;
     justify-content: center;
     height: 40px;
@@ -87,18 +93,18 @@
 
 @media (max-width: 1400px) {
     .quastions-body {
-        padding: 150px 100px;
+        padding: 50px 100px;
     }
 }
 
 @media (max-width: 800px) {
     .quastions-body {
-        padding: 150px 50px;
+        padding: 50px;
     }
 }
 
 @media (max-width: 500px) {
     .quastions-body {
-        padding: 150px 20px;
+        padding: 50px 20px;
     }
 }

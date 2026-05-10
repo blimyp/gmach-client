@@ -3,6 +3,7 @@ import "./someGalleryPictures.css";
 import CustomButton from "../../common/button/button";
 import { useNavigate } from "react-router-dom";
 import routes from '../../../constants/routes';
+import Title from "../../common/title";
 
 
 
@@ -25,6 +26,7 @@ export default function SomeGalleryPictures({ images }) {
 
     return (
         <div className="img-body">
+            <Title text={"טעימה מהגלריה"} />
             <div className="image-grid">
                 {imgs.map((src, i) => (
                     <div className="image-container" key={i}>

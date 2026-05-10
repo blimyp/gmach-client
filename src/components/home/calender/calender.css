@@ -1,6 +1,5 @@
 .dates-container {
     padding: 100px;
-    background: var(--light-grey);
     text-align: center;
 }
 
@@ -16,22 +15,23 @@
 
 .react-calendar {
     border: none;
-    border-radius: 15px;
-    max-width: 90vw;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius);
+    width: 70vw;
+    margin: auto;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
     font-family: 'Rubik', sans-serif !important;
 }
 
 .react-calendar__navigation button {
     border-radius: 50vh;
-
 }
 
 .react-calendar__tile {
     height: 50px;
     width: 50px;
-    border-radius: 50%;
+    border-radius: 5px;
     font-size: 1.1rem;
     color: var(--dark-blue) !important;
 }
@@ -52,5 +52,5 @@
 .date-taken {
     background-color: var(--blue) !important;
     color: var(--yellow) !important;
-    border-radius: 50%;
+    border-radius: 5px;
 }

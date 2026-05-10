@@ -1,19 +1,17 @@
 .banner-body {
-    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .banner-bar {
-    background: radial-gradient(circle, var(--blue), var(--dark-blue), var(--blue), var(--dark-blue));
+    background: linear-gradient(to bottom, var(--dark-blue), var(--blue), white);
     padding: 50px 0;
     overflow: hidden;
     display: flex;
     justify-content: center;
     font-size: 1.1rem;
-    width: 90vw;
+    width: 70vw;
     margin: auto;
-    border-radius: 50vh;
-    border: 2px solid var(--yellow);
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    border-radius: var(--radius);
 }
 
 .banner-content {
@@ -52,11 +50,6 @@
         transform: translateX(0);
     }
 
-    /* 90% {
-        opacity: 0;
-        transform: translateX(-40vw);
-    } */
-
     100% {
         opacity: 0;
         transform: translateX(-40vw);
@@ -88,12 +81,6 @@
         opacity: 1;
         transform: translateX(0);
     }
-
-
-    /* 90% {
-        opacity: 0;
-        transform: translateX(40vw);
-    } */
 
     100% {
         opacity: 0;

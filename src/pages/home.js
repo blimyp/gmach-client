@@ -1,5 +1,3 @@
-import ImageTextSplit from '../components/home/events/events';
-import OurStory from '../components/home/ourStory/ourStory';
 import ThankCard from '../components/home/thankCards/thankCard';
 import LoanSteps from '../components/home/threeLevels/threeLevels';
 import FirstSection from '../components/home/firstSection/firstSection';
@@ -23,22 +21,19 @@ export default function Home() {
 
             <div className="content-overlay">
                 <FirstSection />
-                <div className='grey-container'>
-                    <ArticleButton />
-                    <ImageTextSplit />
-                </div>
                 <div className='white-bg-container'>
-                    <div className='top-layer-container'><OurStory /></div>
-                    <div className="top-container"><Quastions /></div>
-                    <SomeGalleryPictures />
+                    <Quastions />
+                    <ArticleButton />
                     <ThankCard />
+                    <SomeGalleryPictures />
                 </div>
                 <HoleOverlay />
-                <OrdersDatesCalender />
                 <div className='white-bg-container'>
+                    <OrdersDatesCalender />
                     <Details />
                     <LoanSteps />
                 </div>
+                <a target="_blank" rel="noopener noreferrer" href='https://blimy-shteinberg.netlify.app' className='effect-line'>© Effect 2026</a>
             </div>
 
             <CirclePopup />

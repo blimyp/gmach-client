@@ -1,61 +1,107 @@
-// import React from 'react';
-// import './thankCard.css';
+import { useState } from "react";
+import Title from "../../common/title";
+import "./thankCard.css";
 
-// const thanksTexts = [
-//     {
-//         name: "תמי",
-//         text: "הגמח הזה פשוט מדהים,\n העלה לנו את הרמה של האירוע,\nכולם התפעלו ממש!\nתודה ענקית!!"
-//     },
-//     {
-//         name: "משפחת גרינברג",
-//         text: "אנחנו מאד מעריכים את העבודה שלכם,\nאנחנו מאד מרוצים,\nהבר שלנו יצא מהמם!"
-//     },
-//     {
-//         name: "חיה",
-//         text: "לא האמנו כמה זה ישדרג לנו את האירוע,\nהכול היה מסודר, נקי ומרשים!\nתודה רבה מכל הלב!"
-//     }
-// ];
+const thanksTexts = [
+    {
+        name: "תמי",
+        text: `הגמח הזה פשוט מדהים,
+העלה לנו את הרמה של האירוע,
+כולם התפעלו ממש!
+תודה ענקית!!`
+    },
+    {
+        name: "משפחת גרינברג",
+        text: `אנחנו מאד מעריכים את העבודה שלכם,
+אנחנו מאד מרוצים,
+הבר שלנו יצא מהמם!`
+    },
+    {
+        name: "חיה",
+        text: `לא האמנו כמה זה ישדרג לנו את האירוע,
+הכול היה מסודר, נקי ומרשים!
+תודה רבה מכל הלב!`
+    },
+    {
+        name: "ציפי קליין",
+        text: `אין לנו מילים להודות,
+    הכול הגיע בזמן,
+    היה אסתטי, מסודר ומכובד,
+    והתגובות באירוע היו מדהימות!`
+    },
+    {
+        name: "רות",
+        text: `שירות פשוט מיוחד.
+    הרגשנו שיש על מי לסמוך מהרגע הראשון,
+    והתוצאה יצאה הרבה מעבר למה שציפינו.`
+    },
+    {
+        name: "משפחת מאור",
+        text: `כבר בתחילת האירוע כולם ניגשו לשאול מאיפה הבר,
+    הכול היה נקי, מושקע ומסודר בצורה מקצועית.
+    תודה רבה על ההשקעה והיחס הנעים!`
+    }
+];
 
-// export default function ThankCard({ text, title }) {
-//     return (
-//         <div className="thank-cards-row">
-//             {thanksTexts.map((thankData, index) => (
-//                 <div className="elegant-card" key={`thank card ${index}`}>
-//                     <h2 className="elegant-card-title">{thankData.name}</h2>
-//                     <pre className='thank_text'>{thankData.text}</pre>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// }
-import TextAnimation from "../../common/textAnimation/textAnimation";
-import './thankCard.css';
+export default function ThankCard() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState("right");
 
-export default function ThankCard({ text, title }) {
+    const nextSlide = () => {
+        setDirection("right");
+
+        setCurrentIndex((prev) =>
+            prev === thanksTexts.length - 1 ? 0 : prev + 1
+        );
+    };
+
+    const prevSlide = () => {
+        setDirection("left");
+
+        setCurrentIndex((prev) =>
+            prev === 0 ? thanksTexts.length - 1 : prev - 1
+        );
+    };
+
     return (
         <div className="info-body">
+            <Title text={"לקוחות מרוצים"} />
+
             <div className="info-section">
-                <div className="info-image" >
-                    {/* <BiSolidQuoteAltRight size={200} /> */}
-                    <img src="/images/info_image.jpg" alt="info" className="info-bar-image" />
+                <div className="info-image">
+                    <img
+                        src="/images/info_image.jpg"
+                        alt="info"
+                        className="info-bar-image"
+                    />
                 </div>
+
                 <div className="info-text-div">
-                    <TextAnimation>
-                        <p>
-                            "רציתי להודות לכם מכל הלב על העזרה המדהימה שנתתם לי בארגון האירוע שלנו.
-                            הכלים שהשאילתם לנו היו נקיים, מסודרים, ובמצב מעולה, וזה חסך לנו המון הוצאות וטרחה.
-                            בזכותכם הצלחנו להפיק אירוע מכובד ושמח, וכל האורחים החמיאו על העיצוב והסידור.
-
-                            תבורכו על כל מה שאתם עושים למען הציבור!
-                            יישר כוח גדול, ושה׳ ייתן לכם שפע ברכה והצלחה בכל מעשה ידיכם.
-
-                            בתודה והערכה,
-                            משפחת כהן"
-                        </p>
-                    </TextAnimation>
+                    <div
+                        key={currentIndex}
+                        className={`slide-animation ${direction}`}
+                    >
+                        <div>
+                            <h3>{thanksTexts[currentIndex].name}</h3>
+                            <p>{thanksTexts[currentIndex].text}</p>
+                        </div>
+                    </div>
+                    <div className="arrows">
+                        <button onClick={prevSlide}>→</button>
+                        <div className="dots">
+                            {thanksTexts.map((_, index) => (
+                                <span
+                                    key={index}
+                                    className={`dot ${currentIndex === index ? "active" : ""
+                                        }`}
+                                    onClick={() => setCurrentIndex(index)}
+                                />
+                            ))}
+                        </div>
+                        <button onClick={nextSlide}>←</button>
+                    </div>
                 </div>
             </div>
         </div>
     );
 }
-

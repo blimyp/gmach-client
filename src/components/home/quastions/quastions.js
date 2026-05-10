@@ -46,23 +46,25 @@ export default function Quastions() {
     };
 
     return (
-        <div className="quastions-body">
-            <Title text={"כל התשובות מחכות לך כאן!"} />
-            <div className="faq-list">
-                {faq.map((item, index) => (
-                    <div className="faq-item" key={index}>
-                        <button className="faq-question" onClick={() => toggle(index)}>
-                            <div className="faq-row">
-                                <span className="questio-icon">{item.icon}</span>
-                                {item.question}
+        <div className="questions-section">
+            <div className="quastions-body">
+                <Title text={"כל התשובות מחכות לך כאן!"} />
+                <div className="faq-list">
+                    {faq.map((item, index) => (
+                        <div className="faq-item" key={index}>
+                            <button className="faq-question" onClick={() => toggle(index)}>
+                                <div className="faq-row">
+                                    <span className="questio-icon">{item.icon}</span>
+                                    {item.question}
+                                </div>
+                                {openIndex === index ? (<FiMinusCircle size={20} />) : (<FiPlusCircle size={20} />)}
+                            </button>
+                            <div className={`faq-answer ${openIndex === index ? "open" : ""}`}>
+                                <p>{item.answer}</p>
                             </div>
-                            {openIndex === index ? (<FiMinusCircle size={20} />) : (<FiPlusCircle size={20} />)}
-                        </button>
-                        <div className={`faq-answer ${openIndex === index ? "open" : ""}`}>
-                            <p>{item.answer}</p>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

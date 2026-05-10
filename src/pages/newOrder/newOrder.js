@@ -1,18 +1,27 @@
 import React, { useState, useRef, useContext, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import './newOrder.css';
 import { createOrder } from '../../services/orderService';
 import emailjs from "@emailjs/browser";
 import Spinner from '../../components/common/spinner/spinner';
 import { AuthContext } from '../../contexts/authContext';
+import routes from '../../constants/routes';
+import { TextField } from '@mui/material';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import { StandsCategories } from "../../constants/standsCategories";
 
 export default function NewOrder() {
+    const navigate = useNavigate();
     const form = useRef();
     const { date } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         orderDate: '',
         orderDescription: '',
+        orderCategory: '',
     });
     const { user } = useContext(AuthContext);
 
@@ -24,6 +33,8 @@ export default function NewOrder() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+        console.log(name);
+        console.log(value);
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
@@ -36,6 +47,7 @@ export default function NewOrder() {
                 setIsLoading(false);
                 alert('ההזמנה נשלחה בהצלחה!');
                 sendEmail(newOrder.orderId);
+                navigate(routes.home);
             }
         } catch (err) {
             console.log(err);
@@ -58,27 +70,48 @@ export default function NewOrder() {
             <img src="/images/background.jpg" alt="background" className="background-img" />
             <form ref={form} className="order-form" onSubmit={handleSubmit}>
                 <h2>טופס השלמת הזמנה</h2>
-                <label>
-                    תאריך הזמנה:
-                    <input
-                        type="date"
-                        name="orderDate"
-                        value={formData.orderDate}
-                        onChange={handleChange}
-                        required
-                    />
-                </label>
+                <TextField
+                    id="outlined-basic"
+                    label="תאריך הזמנה:"
+                    variant="outlined"
+                    onChange={handleChange}
+                    value={formData.orderDate}
+                    name={'orderDate'}
+                    required
+                    className='new_order_input'
+                    type={'date'}
+                    onInvalid={(e) => e.target.setCustomValidity("שדה חובה")}
+                    onInput={(e) => e.target.setCustomValidity("")}
+                />
 
-                <label>
-                    תאור פריטים:
-                    <input
-                        type="text"
-                        name="orderDescription"
-                        value={formData.orderDescription}
+                <FormControl fullWidth>
+                    <InputLabel id="demo-simple-select-label">קטגוריה</InputLabel>
+                    <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={formData.orderCategory}
+                        name={'orderCategory'}
+                        label="קטגוריה"
                         onChange={handleChange}
-                        required
-                    />
-                </label>
+                    >
+                        {Object.values(StandsCategories).map(
+                            (category) => <MenuItem value={category.value}>{category.text}</MenuItem>
+                        )}
+                    </Select>
+                </FormControl>
+
+                <TextField
+                    id="outlined-basic"
+                    label="תאור פריטים:"
+                    variant="outlined"
+                    onChange={handleChange}
+                    value={formData.orderDescription}
+                    name={'orderDescription'}
+                    required
+                    className='new_order_input'
+                    onInvalid={(e) => e.target.setCustomValidity("שדה חובה")}
+                    onInput={(e) => e.target.setCustomValidity("")}
+                />
 
                 <button type="submit" disabled={isLoading}>
                     שליחה

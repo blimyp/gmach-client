@@ -5,13 +5,13 @@
     width: 60px;
     height: 60px;
     z-index: 5;
-    background: var(--blue);
+    background: var(--dark-blue);
+    box-shadow: 0 0 10px white;
     border: none;
     border-radius: 50%;
     color: var(--yellow);
     font-size: 30px;
     cursor: pointer;
-    animation: growShrink 2s infinite ease-in-out;
 }
 
 .mobile-dialog {
