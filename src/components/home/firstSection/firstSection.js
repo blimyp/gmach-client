@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './firstSection.css';
-import { RxQuote } from "react-icons/rx";
 import { TypingText } from './typingText';
 
 export default function FirstSection() {
@@ -21,7 +20,7 @@ export default function FirstSection() {
         <div className="welcome-container">
             <div className='welcome-body'>
                 <div className='welcome-text'>
-                    <img src='/images/logo5.png'></img>
+                    <img src='/images/logo5.png' alt='logo'></img>
                     <TypingText text={"גמ\"ח כלים לבר"} fontSize={40} />
                     {showSecondText && <TypingText text={"עוזרים לכם להפוך כל אירוע למושלם ובלתי נשכח."} />}
                 </div>
@@ -34,7 +33,7 @@ export default function FirstSection() {
                         אני משתדלת להעניק יחס אישי, סבלני ומכבד לכל מי שפונה אליי, וללוות אתכם לאורך הדרך — משלב התכנון ועד אחרי האירוע.<br />
                         המטרה שלי היא להיות חלק קטן מהשמחות שלכם, ולעזור ליצור רגעים טובים שנזכרים בהם לאורך זמן.<br />
                         <div>שנפגש תמיד בשמחות!</div>
-                        <img src='/images/logo5.png' />
+                        <img src='/images/logo5.png' alt='logo'/>
                     </div>
                     <div className='welcome-image-div'>
                         <img
