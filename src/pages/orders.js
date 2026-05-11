@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Spinner from "../components/common/spinner/spinner";
 import Title from "../components/common/title";
-import YellowLine from "../components/common/yellowLine";
 import { getOrders } from "../services/orderService";
 import './orders.css'
 
