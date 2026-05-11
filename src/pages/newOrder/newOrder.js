@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { StandsCategories } from "../../constants/standsCategories";
+import Title from "../../components/common/title";
 
 export default function NewOrder() {
     const navigate = useNavigate();
@@ -60,16 +61,15 @@ export default function NewOrder() {
         const templateParams = {
             orderId: orderId,
             customerMail: user.email,
-            customerName: user.name,
+            customerNasme: user.name,
         };
-        emailjs.send("service_knbxmbg", "template_b4ii71d", templateParams, "a9upb4z0sKTekMhII")
+        emailjs.send("service_s6n8m6q", "template_b4ii71d", templateParams, "a9upb4z0sKTekMhII")
     };
 
     return (
         <div className="order-page">
-            <img src="/images/background.jpg" alt="background" className="background-img" />
+            <Title text="שליחת פניה" />
             <form ref={form} className="order-form" onSubmit={handleSubmit}>
-                <h2>שליחת פניה</h2>
                 <TextField
                     id="outlined-basic"
                     label="תאריך הזמנה:"
