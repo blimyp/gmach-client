@@ -53,9 +53,9 @@ export default function LoanSteps() {
                     <div className='circle-icon'>
                         {step.icon}
                     </div>
-                    <h4 className="step-title">{step.title}</h4>
+                    <h4 className="step-title gold-text-gradient">{step.title}</h4>
                     <p className="step-description">{step.description}</p>
-                    {index < steps.length - 1 && <div className="arrow">←</div>}
+                    {index < steps.length - 1 && <div className="arrow gold-text-gradient">←</div>}
                 </div>
             ))}
         </div>

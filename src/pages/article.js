@@ -17,46 +17,46 @@ export default function Article() {
             text: `הצעד הראשון הוא לבחור סגנון עיצוב – צבע מרכזי או נושא
             (כמו "זהב ולבן", "פרחים", "כחול לתינוק", "שבת חתן").
             זה יעזור לך לבחור כלים מתאימים ולקבוע אווירה.`,
-            icon: <IoColorWand size={25} color={'var(--yellow)'} />
+            icon: <IoColorWand size={25} color={'white'} />
         },
         {
             title: "בחרי שולחן או פינה נוחה",
             text: `בחרי שולחן פנוי (רצוי צמוד לקיר) או קונסולה יפה,
             שיכולה לשמש כבסיס לבר. שימי לב שיהיה נגיש אבל לא יפריע למעבר.`,
-            icon: <RiCake3Line size={25} color={'var(--yellow)'} />
+            icon: <RiCake3Line size={25} color={'white'} />
         },
         {
             title: "פרסי מפה יפה",
             text: `מפה פשוטה בגוון אחיד (לבן, שמנת, או לפי הצבעים שבחרת)
             יוצרת בסיס נקי. אפשר להוסיף ראנר או קישוט עדין במרכז.`,
-            icon: <MdOutlineVideoStable size={30} color={'var(--yellow)'} />
+            icon: <MdOutlineVideoStable size={30} color={'white'} />
         },
         {
             title: "הוסיפי גבהים",
             text: `סוד חשוב בעיצוב הוא לשלב כלים בגבהים שונים:
             מעמדים לעוגות, קופסאות שקופות, מגשים מדורגים.
             כך נוצר מראה "עשיר" ולא שטוח.`,
-            icon: <BsBox size={30} color={'var(--yellow)'} />
+            icon: <BsBox size={30} color={'white'} />
         },
         {
             title: "סדרי עוגות בצורה חכמה",
             text: `- באמצע: עוגה מרכזית או קישוט גדול
 - בצדדים: סוכריות, עוגיות, פירות חתוכים או מאפים
 - מקפידים על סימטריה אבל לא נוקשות`,
-            icon: <LuCakeSlice size={30} color={'var(--yellow)'} />
+            icon: <LuCakeSlice size={30} color={'white'} />
         },
         {
             title: "הוסיפי טאץ' אישי",
             text: `שלט עם שם החוגג/ת, פרחים קטנים או נרות,
             כלים בצורת כוכב.`,
-            icon: <GiCloverSpiked size={25} color={'var(--yellow)'} />
+            icon: <GiCloverSpiked size={25} color={'white'} />
         },
         {
             title: "בדקי הכל מראש",
             text: `עשו "חזרה גנרלית" בבית:
             פרסי את הכל, צלמי, ותראי מה חסר או עמוס.
             אפשר לבקש גם המלצה מהגמ"ח!`,
-            icon: <SlLike size={25} color={'var(--yellow)'} />
+            icon: <SlLike size={25} color={'white'} />
         }
     ];
 

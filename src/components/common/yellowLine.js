@@ -6,8 +6,8 @@ export default function YellowLine() {
             style={{
                 width: "100%",
                 height: "3px",
-                backgroundColor: "var(--yellow)",
             }}
+            className='gold-bg-gradient'
         />
     );
 }

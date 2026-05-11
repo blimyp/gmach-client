@@ -32,7 +32,7 @@ export default function SomeGalleryPictures({ images }) {
                     <div className="image-container" key={i}>
                         <div className="flip-card-inner">
                             <div className="flip-card-back">
-                                {descriptionsList[i]}
+                                <p className="gold-text-gradient">{descriptionsList[i]}</p>
                             </div>
                             <div className="flip-card-front">
                                 <img src={src} alt={`image-${i}`} />

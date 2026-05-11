@@ -33,7 +33,7 @@ export default function Details() {
                     {details.map((item, index) => (
                         <div className="detail-item" key={index}>
                             <span className="detail-icon">{item.icon}</span>
-                            <span className="detail-text">{item.text}</span>
+                            <span className="detail-text gold-text-gradient">{item.text}</span>
                         </div>
                     ))}
                 </div>

@@ -87,7 +87,7 @@ export default function ThankCard() {
                         </div>
                     </div>
                     <div className="arrows">
-                        <button onClick={prevSlide}>→</button>
+                        <button onClick={prevSlide}><p className="gold-text-gradient">→</p></button>
                         <div className="dots">
                             {thanksTexts.map((_, index) => (
                                 <span
@@ -98,7 +98,7 @@ export default function ThankCard() {
                                 />
                             ))}
                         </div>
-                        <button onClick={nextSlide}>←</button>
+                        <button onClick={nextSlide}><p className="gold-text-gradient">←</p></button>
                     </div>
                 </div>
             </div>

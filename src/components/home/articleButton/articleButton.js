@@ -12,10 +12,10 @@ export default function ArticleButton() {
         <div className="banner-body">
             <div className="banner-bar">
                 <div className="banner-content">
-                    <h2 className="slide-right">
+                    <h2 className="slide-right gold-text-gradient">
                         רוצה להרים בר מתוקים מושקע ומרשים – בלי כאב ראש?
                     </h2>
-                    <h2 className="slide-left">
+                    <h2 className="slide-left gold-text-gradient">
                         למדריך המלא שלב אחרי שלב:
                     </h2>
                     <CustomButton onClick={handleClick} text={"לחץ כאן"} />

@@ -94,14 +94,12 @@
     animation-fill-mode: both;
     margin-bottom: 20px;
     margin-top: 0px;
-    color: var(--yellow);
 }
 
 .slide-right {
     animation: slideInOutRight 3.5s ease-in-out infinite;
     animation-delay: 1s;
     animation-fill-mode: both;
-    color: var(--yellow);
 }
 
 @media (max-width: 600px) {

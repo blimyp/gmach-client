@@ -14,5 +14,26 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* code {  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace; } */
+.gold-text-gradient {
+  background: linear-gradient(to bottom,
+      #382900 0%,
+      #a77a07 18%,
+      #ffd95a 38%,
+      #fff3b0 50%,
+      #ffd54a 62%,
+      #8f6901 82%,
+      #3f2e00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-bg-gradient {
+  background: linear-gradient(to bottom,
+      #a77a07 0%,
+      #ffd95a 30%,
+      #fff3b0 50%,
+      #ffd54a 70%,
+      #8f6901 100%);
+}

@@ -37,12 +37,16 @@
     padding: 1rem;
     margin-bottom: 1rem;
     text-align: right;
-    color: var(--yellow);
+    color: var(--dark-blue);
 }
 
-.order-item h3{
+.order-item h3 {
     background: radial-gradient(circle, var(--blue), var(--dark-blue));
     padding: 10px 20px;
     border-radius: 50vh;
     width: fit-content;
+}
+
+.order-item h3 p {
+    margin: 0;
 }

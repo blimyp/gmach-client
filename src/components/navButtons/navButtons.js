@@ -35,7 +35,7 @@ const NavButtons = () => {
     return (
         <>
             <button className="hamburger" onClick={() => setIsOpen(true)}>
-                ☰
+                <p className="gold-text-gradient">☰</p>
             </button>
 
 

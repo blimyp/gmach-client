@@ -8,8 +8,8 @@ export default function FirstSection() {
                 <div className='welcome-text'>
                     <img src='/images/logo5.png' alt='logo'></img>
                     <div className="hero-text">
-                        <h1>גמ"ח כלים לבר</h1>
-                        <p>עוזרים לכם להפוך כל אירוע למושלם ובלתי נשכח.</p>
+                        <h1 className='gold-text-gradient'>גמ"ח כלים לבר</h1>
+                        <p className='gold-text-gradient'>עוזרים לכם להפוך כל אירוע למושלם ובלתי נשכח.</p>
                     </div>
                 </div>
                 <div className='welcome_container_content'>

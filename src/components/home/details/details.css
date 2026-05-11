@@ -52,7 +52,6 @@
   border-radius: 50vh;
   border: 1px solid var(--yellow);
   font-size: 1rem;
-  color: var(--yellow);
   overflow: hidden;
   z-index: 0;
   background: radial-gradient(circle, var(--blue), var(--dark-blue));
@@ -95,9 +94,9 @@
   align-items: center;
   border-radius: 50%;
   font-size: 1.4rem;
-  color: var(--yellow);
   margin-left: 0.7rem;
   background-color: white;
+  color: var(--dark-blue);
 }
 
 .detail-text {

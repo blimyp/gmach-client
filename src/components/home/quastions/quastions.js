@@ -54,7 +54,7 @@ export default function Quastions() {
                         <div className="faq-item" key={index}>
                             <button className="faq-question" onClick={() => toggle(index)}>
                                 <div className="faq-row">
-                                    <span className="questio-icon">{item.icon}</span>
+                                    <span className="questio-icon gold-bg-gradient">{item.icon}</span>
                                     {item.question}
                                 </div>
                                 {openIndex === index ? (<FiMinusCircle size={20} />) : (<FiPlusCircle size={20} />)}

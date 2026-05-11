@@ -1,16 +1,3 @@
-.dark-button {
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: white;
-    border: 2px var(--dark-blue) solid;
-    font-size: 20px;
-    color: var(--dark-blue);
-    cursor: pointer;
-    position: relative;
-    transition: background 0.5s ease, color 0.5s ease;
-    font-family: 'Rubik', sans-serif !important;
-}
-
 .light-button {
     display: inline-flex;
     justify-content: center;
@@ -18,38 +5,20 @@
     padding: 10px;
     border-radius: 50px;
     background-color: white;
+    color: var(--blue);
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     font-size: 20px;
-    color: var(--yellow);
     cursor: pointer;
     position: relative;
     transition: background-color 0.5s ease, color 0.5s ease;
     font-family: 'Rubik', sans-serif !important;
 }
 
-.dark-button:hover {
-    background: radial-gradient(circle, var(--blue), var(--dark-blue));
-    color: var(--yellow);
-}
-
-.light-button:hover {
-    background-color: var(--yellow);
-    color: var(--blue);
-}
-
-
-.light-button:hover .arrow-div{
-    background-color: var(--yellow);
-    color: var(--blue);
-    background-color: white;
-}
-
-.arrow-div{
+.arrow-div {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--yellow);
     color: var(--blue);
     width: 30px;
     height: 30px;

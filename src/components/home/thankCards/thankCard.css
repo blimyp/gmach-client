@@ -54,10 +54,13 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: bold;
     background: var(--dark-blue);
-    color: var(--yellow);
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .arrows button:hover {
