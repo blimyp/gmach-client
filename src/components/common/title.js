@@ -3,7 +3,7 @@ import React from "react";
 export default function Title({ text }) {
     return (
         <div style={{
-            margin: "30px",
+            margin: "30px 0",
             display: "inline-block",
             width: "fit-content"
         }}>

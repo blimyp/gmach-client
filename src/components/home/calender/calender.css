@@ -1,5 +1,5 @@
 .dates-container {
-    padding: 100px;
+    padding: 100px 0;
     text-align: center;
 }
 
@@ -53,4 +53,10 @@
     background-color: var(--blue) !important;
     color: var(--yellow) !important;
     border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .react-calendar {
+        width: 90vw;
+    }
 }

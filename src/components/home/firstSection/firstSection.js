@@ -1,39 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './firstSection.css';
-import { TypingText } from './typingText';
 
 export default function FirstSection() {
-    const [showSecondText, setShowSecondText] = useState(false);
-
-    useEffect(() => {
-
-        const logoTimer = setTimeout(() => {
-            setShowSecondText(true);
-        }, 1300);
-
-        return () => {
-            clearTimeout(logoTimer);
-        };
-    }, []);
-
     return (
         <div className="welcome-container">
             <div className='welcome-body'>
                 <div className='welcome-text'>
                     <img src='/images/logo5.png' alt='logo'></img>
-                    <TypingText text={"גמ\"ח כלים לבר"} fontSize={40} />
-                    {showSecondText && <TypingText text={"עוזרים לכם להפוך כל אירוע למושלם ובלתי נשכח."} />}
+                    <div className="hero-text">
+                        <h1>גמ"ח כלים לבר</h1>
+                        <p>עוזרים לכם להפוך כל אירוע למושלם ובלתי נשכח.</p>
+                    </div>
                 </div>
                 <div className='welcome_container_content'>
                     <div className="welcome-text-div">
                         גמ"ח הכלים לבר נולד מתוך רצון לשמח ולהקל בשמחות שלכם.<br />
-                        אני מאמינה ששמחה אמיתית מתחילה דווקא בפרטים הקטנים, ושכשיש סדר ורוגע — אפשר ליהנות באמת מהאירוע.<br />
+                        אני מאמינה ששמחה אמיתית מתחילה דווקא בפרטים הקטנים.<br />
                         הכלים שאני משאילה מאפשרים לכם להתמקד בשמחה עצמה, בלי דאגות מיותרות סביב ההתארגנות.<br />
                         חשוב לי שכל השאלה תיעשה בצורה נעימה, מסודרת ונקייה, עם אחריות ותשומת לב לכל פרט.<br />
-                        אני משתדלת להעניק יחס אישי, סבלני ומכבד לכל מי שפונה אליי, וללוות אתכם לאורך הדרך — משלב התכנון ועד אחרי האירוע.<br />
+                        אני משתדלת להעניק יחס אישי, סבלני ומכבד לכל מי שפונה אליי.<br />
                         המטרה שלי היא להיות חלק קטן מהשמחות שלכם, ולעזור ליצור רגעים טובים שנזכרים בהם לאורך זמן.<br />
                         <div>שנפגש תמיד בשמחות!</div>
-                        <img src='/images/logo5.png' alt='logo'/>
+                        <img src='/images/logo5.png' alt='logo' />
                     </div>
                     <div className='welcome-image-div'>
                         <img

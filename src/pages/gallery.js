@@ -30,6 +30,7 @@ const getImages = () => [
     { category: 2, src: '/images/gallery24.jpg', SKU: 346 },
     { category: 2, src: '/images/gallery25.jpg', SKU: 347 },
     { category: 3, src: '/images/gallery26.jpg', SKU: 348 },
+    { category: 2, src: '/images/gallery27.jpg', SKU: 349 },
 ];
 
 export default function Gallery() {

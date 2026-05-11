@@ -1,21 +1,12 @@
 .gallery-page {
-    max-width: 80vw;
     text-align: center;
     direction: rtl;
-    margin: auto;
-}
-
-.gallery-title {
-    font-size: 28px;
-    margin-bottom: 30px;
-    margin-top: 0;
-    color: var(--blue);
-    padding: 20px 0;
 }
 
 .gallery-grid {
     column-count: 3;
-    column-gap: 30px;
+    max-width: 80vw;
+    margin: auto;
 }
 
 @media (max-width: 1000px) {

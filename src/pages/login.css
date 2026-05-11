@@ -14,7 +14,8 @@
     padding: 50px;
     border-radius: 12px;
     width: 100%;
-    max-width: 500px;
+    max-width: min(90vw, 500px);
+    box-sizing: border-box;
 }
 
 .login-form input {
@@ -51,4 +52,10 @@
 .register-prompt {
     margin-top: 1rem;
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    .login-form {
+        padding: 20px;
+    }
 }
