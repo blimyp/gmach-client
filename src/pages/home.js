@@ -22,10 +22,10 @@ export default function Home() {
             <div className="content-overlay">
                 <FirstSection />
                 <div className='white-bg-container'>
+                    <SomeGalleryPictures />
                     <Quastions />
                     <ArticleButton />
                     <ThankCard />
-                    <SomeGalleryPictures />
                 </div>
                 <HoleOverlay />
                 <div className='white-bg-container'>

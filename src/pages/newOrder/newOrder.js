@@ -69,7 +69,7 @@ export default function NewOrder() {
         <div className="order-page">
             <img src="/images/background.jpg" alt="background" className="background-img" />
             <form ref={form} className="order-form" onSubmit={handleSubmit}>
-                <h2>טופס השלמת הזמנה</h2>
+                <h2>שליחת פניה</h2>
                 <TextField
                     id="outlined-basic"
                     label="תאריך הזמנה:"

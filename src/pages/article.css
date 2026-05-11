@@ -84,3 +84,19 @@
 .total-text {
     color: white !important;
 }
+
+@media (max-width: 600px) {
+    .article-container {
+        padding: 80px 30px;
+    }
+
+    .step-content {
+        padding: 0 30px;
+    }
+
+    .article-step .timeline-indicator {
+        width: 50px;
+        height: 50px;
+        border-width: 3px;
+    }
+}

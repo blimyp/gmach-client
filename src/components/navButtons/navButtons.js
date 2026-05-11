@@ -48,7 +48,7 @@ const NavButtons = () => {
                     {/* {token && <UserNameButton isMobile={true} />} */}
                     <LinkButton onClick={() => handleNavigate(routes.home)} text={'דף בית'} />
                     <LinkButton onClick={() => handleNavigate(routes.gallery)} text={'גלריה'} />
-                    <LinkButton onClick={() => handleNavigate(token ? routes.newOrder : routes.login)} text={'הזמנה חדשה'} />
+                    <LinkButton onClick={() => handleNavigate(token ? routes.newOrder : routes.login)} text={'שליחת פניה'} />
                     {token && <LinkButton onClick={() => handleNavigate(routes.orders)} text={'רשימת הזמנות'} />}
                     {token && <CustomButton text={'התנתק'} onClick={() => logoutContext()} />}
                     {!token && <CustomButton text={'התחברות'} onClick={() => handleNavigate(routes.login)} />}
