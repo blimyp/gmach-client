@@ -2,7 +2,7 @@ import React from "react";
 import { FaPhone, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import "./details.css";
-import Title from "../../common/title";
+import Title from "../../common/title/title";
 
 const details = [
     {

@@ -1,4 +1,4 @@
-.questions-section{
+.questions-section {
     padding-top: 100px;
 }
 
@@ -28,13 +28,16 @@
 }
 
 .faq-item {
-    /* border: 1px solid var(--yellow); */
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     margin-bottom: 30px;
     background-color: white;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
+}
+
+.faq-item:hover {
+    transform: scale(1.1);
 }
 
 .faq-question {
@@ -50,7 +53,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: var(--beige); */
 }
 
 .faq-row {

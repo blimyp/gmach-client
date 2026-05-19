@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Spinner from "../components/common/spinner/spinner";
-import Title from "../components/common/title";
+import Title from "../components/common/title/title";
 import { getOrders } from "../services/orderService";
 import './orders.css'
 

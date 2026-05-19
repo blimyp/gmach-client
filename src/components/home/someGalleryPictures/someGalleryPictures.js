@@ -3,7 +3,7 @@ import "./someGalleryPictures.css";
 import CustomButton from "../../common/button/button";
 import { useNavigate } from "react-router-dom";
 import routes from '../../../constants/routes';
-import Title from "../../common/title";
+import Title from "../../common/title/title";
 
 
 

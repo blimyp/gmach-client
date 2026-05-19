@@ -6,7 +6,7 @@ import { AuthContext } from '../contexts/authContext';
 import { useNavigate } from 'react-router-dom';
 import routes from '../constants/routes';
 import Spinner from '../components/common/spinner/spinner';
-import Title from "../components/common/title";
+import Title from "../components/common/title/title";
 
 function LoginForm({ routeToNavigate }) {
     const [isSignUp, setIsSignUp] = useState(false);

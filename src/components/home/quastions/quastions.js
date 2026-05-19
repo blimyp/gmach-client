@@ -4,7 +4,7 @@ import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
 import { PiHandCoins } from "react-icons/pi";
 import { IoCartOutline } from "react-icons/io5";
 import { BsCalendarDate } from "react-icons/bs";
-import Title from "../../common/title";
+import Title from "../../common/title/title";
 
 
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Title from "../../common/title";
+import Title from "../../common/title/title";
 import "./thankCard.css";
 
 const thanksTexts = [

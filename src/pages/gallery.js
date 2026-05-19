@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Title from '../components/common/title';
+import Title from '../components/common/title/title';
 import './gallery.css';
 import GalleryCard from './galleryCard';
 

@@ -5,7 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 import { getOrdersDates } from "../../../services/orderService";
 import "./calender.css";
 import routes from "../../../constants/routes";
-import Title from "../../common/title";
+import Title from "../../common/title/title";
 
 export default function OrdersDatesCalender() {
     const [dates, setDates] = useState([]);

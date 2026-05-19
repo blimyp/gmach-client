@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { StandsCategories } from "../../constants/standsCategories";
-import Title from "../../components/common/title";
+import Title from "../../components/common/title/title";
 
 export default function NewOrder() {
     const navigate = useNavigate();
