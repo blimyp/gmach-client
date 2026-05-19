@@ -1,6 +1,16 @@
 @import './styles/colors.css';
 @import './styles/sizes.css';
 
+@font-face {
+  font-family: "Gan";
+  src: url("../public/fonts/ganclm_bold-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GevertLevin";
+  src: url("../public/fonts/GveretLevin.otf") format("truetype");
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

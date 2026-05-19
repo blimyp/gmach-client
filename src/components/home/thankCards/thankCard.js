@@ -20,13 +20,14 @@ const thanksTexts = [
         name: "חיה",
         text: `לא האמנו כמה זה ישדרג לנו את האירוע,
 הכול היה מסודר, נקי ומרשים!
+חייבת גם לציין לטובה את המענה לטלפון בכל שעה אפשרית,
 תודה רבה מכל הלב!`
     },
     {
         name: "ציפי קליין",
         text: `אין לנו מילים להודות,
-    הכול הגיע בזמן,
-    היה אסתטי, מסודר ומכובד,
+    הכול הגיע בזמן, והיה אסתטי, מסודר ומכובד,
+    השירות ג"כ היה מצוין, והעצות איך לסדר את הבר עזרו לנו מאד,
     והתגובות באירוע היו מדהימות!`
     },
     {
@@ -82,8 +83,8 @@ export default function ThankCard() {
                         className={`slide-animation ${direction}`}
                     >
                         <div>
-                            <h3>{thanksTexts[currentIndex].name}</h3>
                             <p>{thanksTexts[currentIndex].text}</p>
+                            <h3>{thanksTexts[currentIndex].name}</h3>
                         </div>
                     </div>
                     <div className="arrows">
