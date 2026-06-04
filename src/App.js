@@ -23,6 +23,7 @@ function App() {
           <Route path={routes.newOrder} element={<NewOrder />} />
           <Route path={`${routes.newOrder}/:date`} element={<NewOrder />} />
         </Routes>
+        <a target="_blank" rel="noopener noreferrer" href='https://blimy-shteinberg.netlify.app' className='effect-line'>© Effect 2026</a>
       </div>
     </Router>
   );

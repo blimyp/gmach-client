@@ -6,7 +6,7 @@
 .gallery-grid {
     column-count: 3;
     max-width: 80vw;
-    margin: auto;
+    margin: 0 auto 100px auto;
 }
 
 @media (max-width: 1000px) {

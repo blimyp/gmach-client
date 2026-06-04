@@ -60,17 +60,3 @@
         transform: scale(1);
     }
 }
-
-.effect-line {
-    background-color: black;
-    color: white;
-    padding: 15px 0;
-    font-family: 'DynaPuff', 'GveretLevin';
-    letter-spacing: 1px;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    text-decoration: rtl;
-}

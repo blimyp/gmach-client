@@ -55,12 +55,14 @@ function LoginForm({ routeToNavigate }) {
                 {isSignUp && (
                     <>
                         <input
+                            className='login_input'
                             type="text"
                             placeholder="שם מלא"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                         />
                         <input
+                            className='login_input'
                             type="tel"
                             placeholder="טלפון"
                             value={phone}
@@ -69,12 +71,14 @@ function LoginForm({ routeToNavigate }) {
                     </>
                 )}
                 <input
+                    className='login_input'
                     type="email"
                     placeholder="אימייל"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
+                    className='login_input'
                     type="password"
                     placeholder="סיסמה"
                     value={password}

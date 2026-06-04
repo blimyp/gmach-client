@@ -2,10 +2,10 @@
 .orders-container {
     position: relative;
     min-height: 100vh;
-    /* overflow-y: auto; */
     padding: 2rem;
     box-sizing: border-box;
     background-color: var(--light-blue);
+    text-align: center;
 }
 
 .title-wrapper {
@@ -24,7 +24,7 @@
 
 /* רשימת הזמנות */
 .orders-list {
-    max-width: 90vw;
+    max-width: 70vw;
     margin: 0 auto;
     list-style: none;
     padding: 0;

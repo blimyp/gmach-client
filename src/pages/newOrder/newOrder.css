@@ -10,6 +10,11 @@
     text-align: center;
 }
 
+.order-page.as_footer {
+    min-height: 0;
+    padding: 100px 0;
+}
+
 .order-form {
     width: 100%;
     max-width: min(90vw, 500px);
@@ -25,6 +30,12 @@
     box-sizing: border-box;
 }
 
+.order-form.as_footer {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
 .order-form h2 {
     margin-bottom: 24px;
     color: black;
@@ -32,8 +43,16 @@
 
 .new_order_input {
     width: 100%;
-    padding: 10px 0;
-    margin-top: 6px;
+    padding: 15px;
+    margin-bottom: 6px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.new_order_input.as_footer {
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .order-form button[type="submit"] {
@@ -54,4 +73,11 @@
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
+}
+
+.new_order_title {
+    font-family: 'GevertLevin';
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
 }

@@ -14,7 +14,7 @@ import Select from '@mui/material/Select';
 import { StandsCategories } from "../../constants/standsCategories";
 import Title from "../../components/common/title/title";
 
-export default function NewOrder() {
+export default function NewOrder({ asFooter = false }) {
     const navigate = useNavigate();
     const form = useRef();
     const { date } = useParams();
@@ -67,24 +67,33 @@ export default function NewOrder() {
     };
 
     return (
-        <div className="order-page">
-            <Title text="שליחת פניה" />
-            <form ref={form} className="order-form" onSubmit={handleSubmit}>
+        <div className={`order-page ${asFooter ? 'as_footer' : ''}`}>
+            {!asFooter && <Title text="שליחת פניה" />}
+            {asFooter && <>
+                <h3 className='new_order_title'>אהבת את הכלים?</h3>
+                <p>אפשר להשאיר פרטים ונחזור אליך בהקדם</p>
+            </>}
+
+            <form ref={form} className={`order-form ${asFooter ? 'as_footer' : ''}`} onSubmit={handleSubmit}>
                 <TextField
                     id="outlined-basic"
                     label="תאריך הזמנה:"
-                    variant="outlined"
+                    variant={asFooter ? "filled" : "outlined"}
                     onChange={handleChange}
                     value={formData.orderDate}
                     name={'orderDate'}
                     required
-                    className='new_order_input'
+                    className={`new_order_input ${asFooter ? 'as_footer' : ''}`}
                     type={'date'}
                     onInvalid={(e) => e.target.setCustomValidity("שדה חובה")}
                     onInput={(e) => e.target.setCustomValidity("")}
                 />
 
-                <FormControl fullWidth>
+                <FormControl
+                    fullWidth
+                    variant={asFooter ? "filled" : "outlined"}
+                    className={`new_order_input ${asFooter ? 'as_footer' : ''}`}
+                >
                     <InputLabel id="demo-simple-select-label">קטגוריה</InputLabel>
                     <Select
                         labelId="demo-simple-select-label"
@@ -103,12 +112,12 @@ export default function NewOrder() {
                 <TextField
                     id="outlined-basic"
                     label="תאור פריטים:"
-                    variant="outlined"
+                    variant={asFooter ? "filled" : "outlined"}
                     onChange={handleChange}
                     value={formData.orderDescription}
                     name={'orderDescription'}
                     required
-                    className='new_order_input'
+                    className={`new_order_input ${asFooter ? 'as_footer' : ''}`}
                     onInvalid={(e) => e.target.setCustomValidity("שדה חובה")}
                     onInput={(e) => e.target.setCustomValidity("")}
                 />
