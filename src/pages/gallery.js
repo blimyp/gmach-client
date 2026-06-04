@@ -6,9 +6,29 @@ import GalleryCard from './galleryCard';
 import NewOrder from './newOrder/newOrder';
 
 export default function Gallery() {
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedIndex, setSelectedIndex] = useState(null);
+    const [slideDirection, setSlideDirection] = useState('next');
     const images = getImages();
     const imageRefs = useRef([]);
+
+    const selectedImage =
+        selectedIndex !== null ? images[selectedIndex].src : null;
+
+    const showPrevImage = (e) => {
+        e.stopPropagation();
+        setSlideDirection('prev');
+        setSelectedIndex((prev) =>
+            prev === 0 ? images.length - 1 : prev - 1
+        );
+    };
+
+    const showNextImage = (e) => {
+        e.stopPropagation();
+        setSlideDirection('next');
+        setSelectedIndex((prev) =>
+            prev === images.length - 1 ? 0 : prev + 1
+        );
+    };
 
     useEffect(() => {
         imageRefs.current = imageRefs.current.slice(0, images.length);
@@ -25,7 +45,7 @@ export default function Gallery() {
                         item={item}
                         index={index}
                         imageRefs={imageRefs}
-                        onImageClick={() => setSelectedImage(item.src)}
+                        onImageClick={() => setSelectedIndex(index)}
                     />
                 ))}
             </div>
@@ -34,13 +54,22 @@ export default function Gallery() {
             {selectedImage && (
                 <div
                     className="gallery-modal"
-                    onClick={() => setSelectedImage(null)}
+                    onClick={() => setSelectedIndex(null)}
                 >
+                    <button className="modal-arrow modal-arrow-right" onClick={showPrevImage}>
+                        ❮
+                    </button>
+
                     <img
                         src={selectedImage}
                         alt="selected"
                         className="modal-image"
+                        onClick={(e) => e.stopPropagation()}
                     />
+
+                    <button className="modal-arrow modal-arrow-left" onClick={showNextImage}>
+                        ❯
+                    </button>
                 </div>
             )}
         </div>
