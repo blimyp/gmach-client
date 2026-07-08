@@ -7,7 +7,6 @@ import NewOrder from './newOrder/newOrder';
 
 export default function Gallery() {
     const [selectedIndex, setSelectedIndex] = useState(null);
-    const [slideDirection, setSlideDirection] = useState('next');
     const images = getImages();
     const imageRefs = useRef([]);
 
@@ -16,7 +15,6 @@ export default function Gallery() {
 
     const showPrevImage = (e) => {
         e.stopPropagation();
-        setSlideDirection('prev');
         setSelectedIndex((prev) =>
             prev === 0 ? images.length - 1 : prev - 1
         );
@@ -24,7 +22,6 @@ export default function Gallery() {
 
     const showNextImage = (e) => {
         e.stopPropagation();
-        setSlideDirection('next');
         setSelectedIndex((prev) =>
             prev === images.length - 1 ? 0 : prev + 1
         );
