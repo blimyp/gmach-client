@@ -28,4 +28,6 @@ export const getImages = () => [
     { category: 2, src: '/images/gallery27.jpg', SKU: 349 },
     { category: 1, src: '/images/gallery28.jpg', SKU: 350 },
     { category: 3, src: '/images/gallery29.jpg', SKU: 351 },
+    { category: 1, src: '/images/gallery30.jpg', SKU: 352 },
+    { category: 1, src: '/images/gallery31.jpg', SKU: 353 },
 ];
