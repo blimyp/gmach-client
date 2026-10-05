@@ -1,4 +1,6 @@
 export const getImages = () => [
+    { category: 1, src: '/images/gallery32.jpg', SKU: 354 },
+    { category: 1, src: '/images/gallery33.jpg', SKU: 355 },
     { category: 4, src: '/images/gallery1.jpg', SKU: 323 },
     { category: 1, src: '/images/gallery2.jpg', SKU: 324 },
     { category: 1, src: '/images/gallery3.jpg', SKU: 325 },
