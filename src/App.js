@@ -8,10 +8,12 @@ import LoginForm from './pages/login';
 import Orders from './pages/orders';
 import NewOrder from './pages/newOrder/newOrder';
 import Article from './pages/article';
+import ScrollToTop from './components/scrollToTop/scrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className='scroll-div'>
         <NavButtons />
         <Routes>
